@@ -1,7 +1,8 @@
 const express = require('express')
 const router = express.Router()
 
-let logo = "./public/img/logo2.png"
+let url_js_files = "/public/js"
+
 
 let menu =  [
             {
@@ -69,20 +70,22 @@ let menu =  [
 
     ]
 
-
-// rutas para visualizar
+// RUTAS WEB
 router.get("/", async (req, res) => {
 
     res.render('index', {
-            title: 'ToothLabMX'
+            title: 'Cultura de Jesus Oficial | Home',
+            url_js_files
         }
     )
 })
 
+
+
 router.get("/panel", async (req, res) => {
 
     res.render('panel', {
-            title: 'ToothLabMX | Panel',
+            title: 'Cultura de jesus | Panel',
             menu,
             logo
 
@@ -90,104 +93,15 @@ router.get("/panel", async (req, res) => {
     )
 })
 
-router.get("/orders", async (req, res) => {
 
-    res.render('ordenes', {
-        title: 'ToothLabMX | Ordenes',
-        menu,
-        logo
+
+router.get("/:page", async (req, res) => {
+    res.render("404", {
+        title: 'Cultura de Jesus Oficial | Home',
+        url_js_files
     })
-})
-
-router.get("/products", async (req, res) => {
-
-    res.render('productos', {
-        title: 'ToothLabMX | Productos',
-        menu,
-        logo
-    })
-})
-
-router.get("/dentistas", async (req, res) => {
-
-    res.render('dentistas', {
-        title: 'ToothLabMX | Dentistas',
-        menu,
-        logo
-    })
-})
+});
 
 
-//RUTAS DE LAS VISTAS PARA LA SECCION DE ORDENES
-
-router.get("/status_entrante", async (req, res) => {
-
-    res.render('statusViews/status_entrante', {
-        title: 'ToothLabMX | Entrantes',
-        menu,
-        logo,
-        status: 1
-    })
-})
-
-router.get("/status_prueba", async (req, res) => {
-
-    res.render('statusViews/status_prueba', {
-        title: 'ToothLabMX | A prueba',
-        menu,
-        logo,
-        status: 2
-    })
-})
-
-router.get("/status_regresadas", async (req, res) => {
-
-    res.render('statusViews/status_regresadas', {
-        title: 'ToothLabMX | Regresadas',
-        menu,
-        logo,
-        status: 3
-    })
-})
-
-router.get("/status_terminadas", async (req, res) => {
-
-    res.render('statusViews/status_terminadas', {
-        title: 'ToothLabMX | Terminadas',
-        menu,
-        logo,
-        status: 4
-    })
-})
-
-router.get("/status_cambios", async (req, res) => {
-
-    res.render('statusViews/status_cambios', {
-        title: 'ToothLabMX | Con cambios',
-        menu,
-        logo,
-        status: 5
-    })
-})
-
-router.get("/status_CancelConCostos", async (req, res) => {
-
-    res.render('statusViews/status_CancelConCostos', {
-        title: 'ToothLabMX | Canceladas con cambios',
-        menu,
-        logo,
-        status: 6
-    })
-})
-
-router.get("/status_canceladas", async (req, res) => {
-
-    res.render('statusViews/status_canceladas', {
-        title: 'ToothLabMX | Canceladas ',
-        menu,
-        logo,
-        status: 7
-    })
-})
 
 module.exports = router

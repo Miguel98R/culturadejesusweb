@@ -1,6 +1,36 @@
 let TOKEN_ = false
 let DATA_ = false
 
+
+$(".navbar-nav li a").on("click", function(event) {
+    $(".navbar-collapse").collapse('hide');
+});
+
+$(".navbar-toggler").on("click", function(event) {
+    event.preventDefault();
+    $(this).toggleClass("active");
+});
+
+if ($(window).width() >= 1200  ) {
+    $("#logoNav").css('max-height','170px');
+    $("#title").css('font-size','5rem');
+
+}
+
+if ($(window).width() >=880 &&  $(window).width() < 1200) {
+    $("#logoNav").css('max-height','170px');
+
+    $("#title").css('font-size','4rem');
+
+}
+
+if ($(window).width() < 880) {
+    $("#logoNav").css('max-height','95px');
+    $("#title").css('font-size','3rem');
+
+}
+
+
 moment.locale('es');
 /**
  * Spanish translation for bootstrap-datepicker
@@ -120,19 +150,6 @@ let api_conection = async function (method, url, data, f_, error_) {
         return 0
     }
 }
-
-let dt_draw = function (data_table) {
-
-    api_conection("GET", "api/orders/data_dataTables/" + STATUS_BUSQUEDA, {}, function (data) {
-        data_query = data.data;
-
-
-        data_table.clear();
-        data_table.rows.add(data_query).draw();
-    });
-};
-
-
 
 $(document).ready(function () {
 
