@@ -1,0 +1,69 @@
+doctype html
+html(lang='es')
+    head
+        include ./../templates/headerCDN
+        title #{title}
+    body.bg-black
+        include templates/nav
+        div.bg-white.text-center.py-3.my-3
+            h3.display-5.fw-bold Registro
+
+            div.my-3
+                .container
+                    .card.text-start.border-0
+                        .card-body.border-0
+                            .row
+
+                                .col-2
+                                .col-8
+                                    p.fw-bold Completa los siguientes datos.
+                                    .form-group
+                                        label(for='name') Nombre(s):
+                                        input.form-control#name(type="text")
+                                    .form-group.my-3
+                                        label(for='apellido')  Apellidos:
+                                        input.form-control#apellido
+
+
+                                    .form-group
+                                        label(for='edad')  Edad:
+                                        input.form-control#edad(type="text")
+                                    .form-group.my-3
+                                        label(for='phone')  Celular o Teléfono:
+                                        input.form-control#phone(type="text" maxlength=10)
+
+
+                                    .form-group.my-3
+                                        div
+                                            label(for='edad')  ¿Te congregas ?
+                                        .form-group
+
+                                            input#yes(name="question1" type="radio" value='true')
+                                            label.mx-2(for='yes') Si
+                                        .form-group
+
+                                            input#no(name="question1" type="radio" value='false')
+                                            label.mx-2(for='no') No
+                                    div.my-4
+                                        button#registrer.btn.btn-dark.btn-block.w-100 Registrar
+                                .col-2
+
+
+
+
+
+
+
+
+
+
+
+
+        include templates/footer
+
+
+
+
+    include ./../templates/scripts
+    script(src=url_js_files + '/common.js')
+    script(src=url_js_files + '/jsEvent/home_event.js')

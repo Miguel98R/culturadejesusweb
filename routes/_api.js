@@ -5,6 +5,7 @@ const router = express.Router()
 
 
 router.use('/auth/',require('./auth.routes.js'))
+router.use('/usersEvent',require('./usersEvent.routes'))
 
 
 router.all("*", (req, res) => {

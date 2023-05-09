@@ -12,13 +12,13 @@ $(".navbar-toggler").on("click", function(event) {
 });
 
 if ($(window).width() >= 1200  ) {
-    $("#logoNav").css('max-height','170px');
+    $("#logoNav").css('max-height','120px');
     $("#title").css('font-size','5rem');
 
 }
 
 if ($(window).width() >=880 &&  $(window).width() < 1200) {
-    $("#logoNav").css('max-height','170px');
+    $("#logoNav").css('max-height','120px');
 
     $("#title").css('font-size','4rem');
 
@@ -27,6 +27,11 @@ if ($(window).width() >=880 &&  $(window).width() < 1200) {
 if ($(window).width() < 880) {
     $("#logoNav").css('max-height','95px');
     $("#title").css('font-size','3rem');
+    $("#imagenSobreNosotros").removeClass('text-end');
+    $("#imagenSobreNosotros").addClass('text-center');
+
+    $("#textSobreNosotros").removeClass('text-end');
+    $("#textSobreNosotros").addClass('text-center');
 
 }
 
