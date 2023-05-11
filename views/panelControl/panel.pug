@@ -1,0 +1,32 @@
+doctype html
+html(lang='es')
+    head
+        include ./../templates/headerCDN
+
+
+        title #{title}
+
+
+
+    body.bg-black.text-white
+        #content
+            include templates/nav
+
+            #panelContainer
+
+
+                include templates/menu
+                .panel.two.bg-white.text-black
+                    div
+                        .card-content
+                            .card-header
+                                h2.fw-bolder Panel
+                            .card-body
+
+
+
+
+    include ./../templates/scripts
+    script(src=url_js_files + '/common.js')
+
+    script(src=url_js_files_panel + '/panel.js')
