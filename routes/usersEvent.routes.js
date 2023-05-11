@@ -3,12 +3,14 @@ const express = require('express')
 const router = express.Router()
 
 
-let {newUser} = require('../controllers/usuariosEvent.controller')
+let {newUser,getUsersEvent} = require('../controllers/usuariosEvent.controller')
 
 
 //REGISTRO DEL USUARIO
 router.post('/newUser', newUser)
 
+//REGISTRO DEL USUARIO
+router.post('/getUsersEvent', getUsersEvent)
 
 
 

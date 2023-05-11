@@ -11,63 +11,22 @@ let menu = [
         elements: [
             {
                 icon: 'fas fa-columns',
-                title: 'Dashboard',
-                ref: '/dashbord',
+                title: 'Evento',
+                ref: '/evento',
             },
             {
                 icon: 'fas fa-tools',
                 title: 'Configuración',
                 ref: '/configuracion',
             },
-            {
-                icon: 'fas fa-cubes',
-                title: 'Categorias',
-                ref: '/categories',
-            },
-
-        ]
-    },
-    {
-        title: 'Docentes',
-        elements: [
-
-            {
-                icon: 'fas fa-list',
-                title: 'Ver docentes',
-                ref: '/docentesList',
-            },
 
 
         ]
     },
-    {
-        title: 'Alumnos',
-        elements: [
-
-            {
-                icon: 'fas fa-list',
-                title: 'Ver Alumnos',
-                ref: '/alumnosList',
-            },
-
-        ]
-    },
-    {
-        title: 'Cursos',
-        elements: [
-
-            {
-                icon: 'fas fa-photo-video',
-                title: 'Ver cursos',
-                ref: '/cursosList',
-            },
-        ]
-    },
-
 
 ]
 
-// RUTAS WEB
+//--------------------------------------- RUTAS WEB
 
 
 router.get("/", async (req, res) => {
@@ -81,8 +40,20 @@ router.get("/", async (req, res) => {
     )
 })
 
+router.get("/ddvl", async (req, res) => {
 
-// RUTAS PANEL
+    res.render('ddvl', {
+            title: 'Cultura de Jesus Oficial | DDVL 2023',
+            url_js_files,
+
+
+        }
+    )
+})
+
+
+
+//---------------------------------------- RUTAS PANEL
 
 router.get("/cpanelCultura", async (req, res) => {
 
@@ -102,7 +73,6 @@ router.get("/panel", async (req, res) => {
             title: 'Cultura de jesus | Panel',
             menu,
             url_js_files,
-
             url_js_files_panel
 
 
@@ -110,7 +80,20 @@ router.get("/panel", async (req, res) => {
     )
 })
 
-// RUTAS EVENTO
+router.get("/evento", async (req, res) => {
+
+    res.render('panelControl/evento', {
+            title: 'Cultura de jesus | Panel',
+            menu,
+            url_js_files,
+            url_js_files_panel
+
+
+        }
+    )
+})
+
+//---------------------------------------- RUTAS EVENTO
 
 router.get("/event", async (req, res) => {
 

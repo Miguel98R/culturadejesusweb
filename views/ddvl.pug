@@ -1,0 +1,50 @@
+doctype html
+html(lang='es')
+    head
+        include templates/headerCDN
+
+
+        title #{title}
+
+
+
+    body.bg-black
+        include templates/nav
+        include templates/ddvlTemplates/header
+        section#descriptionDDLV.my-5.py-4
+            div.text-center
+                img#logoddvl(src="/public/img/logos/ddlv_logo_blanco.png" style="max-height:150px;").img-fluid
+            div.container.my-5.text-white
+                p
+                    | El año pasado se cumplió 100 años del primer derramamiento del Espíritu Santo en Pachuca, nuestro clamor por años a sido que el fuego vuelva a correr, el año pasado creemos que se abrió el pozo de fuego, el rio de Dios empezó a correr de una manera gloriosa, muchos pastores que bebieron del Espíritu estan creciendo y hay un mover de Dios en sus ministerios, este año creemos que cientos van a beber del Espíritu siendo marcados como pregoneros del Espíritu Santo te espero este año.
+                cite
+                    | Pastor Hector Andrade
+            div.bg-image.text-center
+                img#imgddvloradores(src="public/img/DDLVimages/portada_general.jpg" style="max-height:600px;").img-fluid
+
+            .container
+                div.text-center.my-3
+                    a.btn.bg-white.btn-md.text-dark(href="https://www.eventbrite.com.mx/e/ddlv23-tickets-520092870777" target="_blank") Obtener entradas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        include templates/footer
+
+
+
+
+    include templates/scripts
+    script(src=url_js_files + '/common.js')
+
+    script(src=url_js_files + '/home.js')

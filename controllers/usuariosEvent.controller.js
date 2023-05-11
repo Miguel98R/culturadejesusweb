@@ -31,7 +31,25 @@ let newUser = async function(req,res){
     }
 }
 
+let getUsersEvent = async function(req,res){
+
+
+    try{
+        let users = await usuariosEventModel.find()
+
+        res.status(200).json({
+            success:true,
+            data:users
+        })
+    }catch (e) {
+        console.error(e)
+        res.status(500).json({
+            success:true,
+            data:users
+        })
+    }
+}
 
 
 
-module.exports = {newUser}
+module.exports = {newUser,getUsersEvent}

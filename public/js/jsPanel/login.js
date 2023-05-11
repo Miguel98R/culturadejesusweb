@@ -1,7 +1,8 @@
 $(document).ready(function () {
 
     $('#loginBtn').click(function () {
-        location.href = '/panel'
+        //location.href = '/panel'
+        location.href = '/evento'
     })
 
 });

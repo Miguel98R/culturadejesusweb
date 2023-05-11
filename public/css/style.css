@@ -38,10 +38,26 @@
 }
 
 header.bg-image {
-    height: 750px; /* ajusta la altura según tu imagen de fondo */
+    height: 550px; /* ajusta la altura según tu imagen de fondo */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+    header.bg-image {
+        height: 350px; /* ajusta la altura según tu imagen de fondo */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    #imgddvloradores {
+        max-height: 900px;
+    }
+    #logoddvl {
+        max-height: 90px;
+    }
 }
 
 header .container {
