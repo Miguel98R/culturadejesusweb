@@ -40,7 +40,7 @@ router.get("/", async (req, res) => {
     )
 })
 
-router.get("/ddvl", async (req, res) => {
+router.get("/ddlv", async (req, res) => {
 
     res.render('ddvl', {
             title: 'Cultura de Jesus Oficial | DDVL 2023',

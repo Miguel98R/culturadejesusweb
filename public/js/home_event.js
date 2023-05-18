@@ -11,7 +11,6 @@ $(document).ready(function () {
         body.phone = $('#phone').val()
         body.congregacion = $('input:radio[name=question1]:checked').val()
 
-        console.log(body.congregacion)
 
         for (let key in body) {
             if (!body[key]) {
