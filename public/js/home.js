@@ -1,7 +1,12 @@
 $(document).ready(function () {
 
 
+    $('.header').addClass('loaded');
+
     Fancybox.bind('[data-fancybox="gallery"]', {
+        Thumbs : {
+            type: "modern"
+        },
         caption: (fancybox, slide) => {
             const caption = slide.caption || "";
 
@@ -11,7 +16,7 @@ $(document).ready(function () {
         },
     });
 
-    Fancybox.bind('[data-fancybox="maps"]', {
+    Fancybox.bind('[data-fancybox="poster"]', {
         // Custom options for all galleries
     });
 

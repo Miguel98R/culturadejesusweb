@@ -1,6 +1,6 @@
 let TOKEN_ = false
 let DATA_ = false
-
+AOS.init();
 
 $(".navbar-nav li a").on("click", function(event) {
     $(".navbar-collapse").collapse('hide');

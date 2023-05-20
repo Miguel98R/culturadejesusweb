@@ -2,6 +2,10 @@ doctype html
 html(lang='es')
     head
         include templates/headerCDN
+        script.
+            $(document).ready(function () {
+                $('.header-image').hide().fadeIn(1000);
+            });
 
 
         title #{title}
