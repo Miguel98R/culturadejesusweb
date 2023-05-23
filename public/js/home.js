@@ -20,4 +20,8 @@ $(document).ready(function () {
         // Custom options for all galleries
     });
 
+    Fancybox.bind('[data-fancybox="maps"]', {
+        // Custom options for all galleries
+    });
+
 });
