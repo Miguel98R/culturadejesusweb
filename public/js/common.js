@@ -140,7 +140,7 @@ let api_conection = async function (method, url, data, f_, error_) {
             }
         } else {
             if (error_) {
-                notyf.error(response.message)
+                //notyf.error(response.message)
 
                 error_(response)
             }

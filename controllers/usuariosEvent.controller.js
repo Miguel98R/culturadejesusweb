@@ -6,6 +6,18 @@ let newUser = async function(req,res){
 
     try{
 
+        let existUser = await usuariosEventModel.findOne({email:body.email})
+
+        if(existUser){
+            res.status(400).json({
+                success:false,
+                message:"Este usuario ya esta registrado"
+            })
+
+            return
+        }
+
+
        let newUser = new usuariosEventModel({
 
            nombre : body.nombre,
@@ -13,6 +25,7 @@ let newUser = async function(req,res){
            edad : body.edad,
            phone : body.phone,
            congregacion : body.congregacion,
+           email : body.email,
        })
 
         await newUser.save()

@@ -12,13 +12,13 @@ let menu = [
             {
                 icon: 'fas fa-columns',
                 title: 'Evento',
-                ref: '/evento',
+                ref: '/eventoPanel',
             },
-            {
+            /*{
                 icon: 'fas fa-tools',
                 title: 'Configuración',
                 ref: '/configuracion',
-            },
+            },*/
 
 
         ]
@@ -42,7 +42,7 @@ router.get("/", async (req, res) => {
 
 router.get("/ddlv", async (req, res) => {
 
-    res.render('ddvl', {
+    res.render('ddlv', {
             title: 'Cultura de Jesus Oficial | DDVL 2023',
             url_js_files,
 
@@ -50,7 +50,6 @@ router.get("/ddlv", async (req, res) => {
         }
     )
 })
-
 
 
 //---------------------------------------- RUTAS PANEL
@@ -80,7 +79,7 @@ router.get("/panel", async (req, res) => {
     )
 })
 
-router.get("/evento", async (req, res) => {
+router.get("/eventoPanel", async (req, res) => {
 
     res.render('panelControl/evento', {
             title: 'Cultura de jesus | Panel',
@@ -98,6 +97,16 @@ router.get("/evento", async (req, res) => {
 router.get("/event", async (req, res) => {
 
     res.render('event/index', {
+            title: 'Cultura de jesus | Congreso Evangelistico',
+            url_js_files
+
+        }
+    )
+})
+
+router.get("/completeRegister", async (req, res) => {
+
+    res.render('event/confirmacionRegistro', {
             title: 'Cultura de jesus | Congreso Evangelistico',
             url_js_files
 

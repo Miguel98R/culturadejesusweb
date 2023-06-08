@@ -1,0 +1,84 @@
+doctype html
+html(lang='es')
+    head
+        include templates/headerCDN
+
+
+        title #{title}
+
+
+
+    body.bg-black
+        include templates/nav
+        include templates/ddvlTemplates/header
+        section#descriptionDDLV.my-5.py-4
+            div.text-center(data-aos="fade-up"  data-aos-duration="3000")
+                img#logoddvl(src="/public/img/logos/ddlv_logo_blanco.png" style="max-height:150px;").img-fluid
+                div.mx-4.my-5.text-center
+                    p.fw-bolder.text-white DIOS DE LOS VIOLENTOS 2023
+                    span.line.p-0.m-0
+            div.container.my-5.text-white(data-aos="fade-up"  data-aos-duration="3000")
+                p
+                    | El año pasado se cumplió 100 años del primer derramamiento del Espíritu Santo en Pachuca, nuestro clamor por años a sido que el fuego vuelva a correr, el año pasado creemos que se abrió el pozo de fuego, el rio de Dios empezó a correr de una manera gloriosa, muchos pastores que bebieron del Espíritu estan creciendo y hay un mover de Dios en sus ministerios, este año creemos que cientos van a beber del Espíritu siendo marcados como pregoneros del Espíritu Santo te espero este año.
+                cite
+                    | Pastor Hector Andrade
+
+            div.bg-image.text-center
+                .container
+                    video#videoDDLV(src='/public/img/DDLVimages/DDLVvideo.mp4' autoplay="" loop="" controls="" style="width: 100%;").embed-responsive-item
+            div.my-5
+
+                div.mx-4.my-5.text-center
+                    h2.display-5.fw-bolder.text-white ¡ Obten tus entradas !
+                    span.line.p-0.m-0
+                .container.my-4
+                    .row
+                        .col-12.col-md-7(data-aos="fade-right"  data-aos-offset="300"   data-aos-easing="ease-in-sine")
+                            img#imgddvloradores(src="/public/img/DDLVimages/Poster.jpg" data-fancybox="poster" data-caption='Fuente: Cultura de jesus' style="max-height:650px;").img-fluid
+
+                        .col-12.col-md-5.my-5
+                            .row
+                                .col-12.col-md-6
+                                    div.text-center
+
+                                        h5.fw-bolder.text-white Faltan
+                                        cite(style="font-size: 150px;").fw-bolder.text-white#contador
+                                        h5.fw-bolder.text-white Dias
+                                .col-12.col-md-6.text-center
+                                    h5.text-white Como llegar al CETYM:
+                                    img#imgDireccion(src="/public/img/DDLVimages/direccionCETYM.png" data-fancybox="poster" data-caption='Fuente: Cultura de jesus' style="max-height:300px;").img-fluid
+
+
+
+
+                            br
+                            a.btn.bg-white.btn-lg.btn-block.text-dark.p-4(href="https://www.eventbrite.com.mx/e/ddlv23-tickets-520092870777" target="_blank") 🎟 Obtener entradas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        include templates/footer
+
+
+
+
+    include templates/scripts
+    script(src=url_js_files + '/common.js')
+
+    script(src=url_js_files + '/home.js')

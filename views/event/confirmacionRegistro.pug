@@ -1,0 +1,26 @@
+doctype html
+html(lang='es')
+    head
+        include ./../templates/headerCDN
+        title #{title}
+    body.bg-black
+        include templates/nav
+        div.bg-white.text-center.py-3.my-3
+            h3.display-5.fw-bold Registro
+
+            div.my-3
+                .container
+                    .card.text-start.border-0
+                        .card-body.border-0
+                            h3.display-3.fw-bolder  ¡ Gracias por registrarte !
+                            h5 En los proximos dias nos pondremos en contacto contigo
+
+
+        include templates/footer
+
+
+
+
+    include ./../templates/scripts
+    script(src=url_js_files + '/common.js')
+    script(src=url_js_files + '/home_event.js')

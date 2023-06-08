@@ -25,6 +25,12 @@ $(document).ready(function () {
                 return '<p>' + data + '</p>'
             }
         },
+        {
+            data: 'email',
+            render: function (data, v, row) {
+                return '<p>' + data + '</p>'
+            }
+        },
 
         {
             data: 'congregacion',
