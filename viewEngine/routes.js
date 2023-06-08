@@ -51,6 +51,17 @@ router.get("/ddlv", async (req, res) => {
     )
 })
 
+router.get("/areas", async (req, res) => {
+
+    res.render('areas', {
+            title: 'Cultura de Jesus Oficial | Áreas',
+            url_js_files,
+
+
+        }
+    )
+})
+
 
 //---------------------------------------- RUTAS PANEL
 
