@@ -65,7 +65,7 @@ router.get("/areas", async (req, res) => {
 
 //---------------------------------------- RUTAS PANEL
 
-router.get("/cpanelCultura", async (req, res) => {
+router.get("/cpanelcj", async (req, res) => {
 
     res.render('panelControl/login', {
             title: 'Cultura de jesus | login',

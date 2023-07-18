@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     $('#loginBtn').click(function () {
         //location.href = '/panel'
-        location.href = '/evento'
+        location.href = '/eventoPanel'
     })
 
 });

@@ -1,6 +1,12 @@
 $(document).ready(function () {
 
 
+    $(".swipebox").swipebox();
+
+    $( '.swipebox' ).click( function( e ) {
+        e.preventDefault();
+    })
+
     $('.header').addClass('loaded');
 
 // Obtener la fecha actual
@@ -17,19 +23,6 @@ $(document).ready(function () {
 
     $('#contador').text(diasRestantes);
 
-
-    Fancybox.bind('[data-fancybox="gallery"]', {
-        Thumbs: {
-            type: "modern"
-        },
-        caption: (fancybox, slide) => {
-            const caption = slide.caption || "";
-
-            return `${slide.index + 1} / ${
-                fancybox.carousel?.slides.length
-            } <br /> ${caption}`;
-        },
-    });
 
     Fancybox.bind('[data-fancybox="poster"]', {
         // Custom options for all galleries
