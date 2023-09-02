@@ -1,27 +1,23 @@
 $(document).ready(function () {
+    HoldOn.open()
 
 
     $(".swipebox").swipebox();
 
-    $( '.swipebox' ).click( function( e ) {
+    $('.swipebox').click(function (e) {
         e.preventDefault();
     })
 
+    $(".viewImage").show()
     $('.header').addClass('loaded');
+    setTimeout(() => {
 
-// Obtener la fecha actual
-    var fechaActual = moment();
 
-// Obtener la fecha objetivo (9 de agosto de 2023)
-    var fechaObjetivo = moment('2023-08-09');
+        HoldOn.close()
+    }, 7000)
 
-// Calcular la diferencia en días entre las dos fechas
-    var diasRestantes = fechaObjetivo.diff(fechaActual, 'days');
 
-// Mostrar la cuenta regresiva en días
-    console.log("Días restantes: " + diasRestantes);
 
-    $('#contador').text(diasRestantes);
 
 
     Fancybox.bind('[data-fancybox="poster"]', {
