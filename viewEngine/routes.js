@@ -176,11 +176,19 @@ router.get("/band", (req, res) => {
     });
 });
 
-router.get("/coming-soon", (req, res) => {
-    res.render("coming-soon");
+router.get("/:page", async (req, res) => {
+    res.render("coming-soon",{
+        title: "Cultura de Jesús| 404",
+        img_link,
+        img_logos,
+    });
 });
 router.get("/contact", (req, res) => {
-    res.render("contact");
+    res.render("contact",{
+        title: "Cultura de Jesús| 404",
+        img_link,
+        img_logos,
+    });
 });
 
 
