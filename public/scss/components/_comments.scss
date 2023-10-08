@@ -1,0 +1,83 @@
+// COMMENTS =========================== //
+.comments {
+  // Overall comments box - holds the original comment and its replies
+  &__box {
+    margin-bottom: $spacing-sm;
+  }
+
+  // Individual comments
+  &__individual {
+    position: relative;
+    overflow: hidden;
+    @include border($width: 0.2rem);
+    padding: $default-padding;
+    @include respond(md) {
+      display: flex;
+    }
+
+    .comments__author {
+      margin-bottom: $spacing-sm;
+
+      @include respond(md) {
+        width: 40rem;
+        margin-right: $spacing-sm;
+        margin-bottom: 0;
+      }
+
+      @include respond(lg) {
+        width: 30rem;
+      }
+
+      // avatar
+      .avatar {
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+
+    // Reply link
+    .comments__reply {
+      position: absolute;
+      top: $spacing-sm;
+      right: $spacing-sm;
+
+      @include respond(md) {
+        top: auto;
+        bottom: $spacing-sm;
+      }
+    }
+
+    // Comment's replies
+    &--replies {
+      border-top-color: $primary-color;
+
+      &::before {
+        content: "A reply";
+        width: auto;
+        background-color: $body-text-color;
+        color: $off-white-color;
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+        padding: $spacing-xs;
+        font-style: italic;
+      }
+
+      @include respond(md) {
+        margin-left: 10%;
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  // Forms
+  .form--comments .form__input {
+    border-color: #d1d1d1;
+    &:hover,
+    &:focus {
+      border-color: $hover-primary-color;
+    }
+  }
+}

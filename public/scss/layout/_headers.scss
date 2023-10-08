@@ -1,0 +1,462 @@
+// GLOBAL HEADERS =========================================================== //
+.header {
+  width: 100%;
+  position: relative;
+  z-index: $zindex-100;
+
+  // The <nav> element
+  #{&}__nav {
+    position: relative;
+    padding: 2rem 0;
+
+    @include respond(lg) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0;
+    }
+  }
+
+  // Brand logo
+  #{&}__logo {
+    width: 12rem;
+    a {
+      width: 100%;
+      height: 100%;
+      @include border($width: 0.1rem, $style: dotted, $color: transparent);
+
+      &:focus {
+        border-color: rgba($off-white-color, 0.4);
+      }
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .header__top-nav {
+    padding: 1rem 0;
+    background-color: $primary-color;
+    color: $off-white-color;
+    p {
+      font-size: 2rem;
+    }
+
+    .promotion [class^="flex-"]:nth-child(2) {
+      @include respond(lg) {
+        text-align: right;
+      }
+    }
+  }
+
+  .header__extra.desktop-version {
+    @include respond(lg) {
+      margin-left: 3rem;
+    }
+  }
+
+  // Mobile menu icon container
+  #{&}__mobile--opener {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+
+  // The menu icon for mobile devices
+  #{&}__mobile--icon {
+    position: relative;
+    background-color: transparent;
+    width: 5rem;
+    height: 5rem;
+    font-size: 4.5rem;
+    padding: 0.6rem;
+    cursor: pointer;
+    @include transition;
+
+    &.rotate {
+      transform: rotate(90deg);
+      height: 4rem;
+      width: 4rem;
+    }
+
+    span {
+      @include transition;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 0.3rem;
+      background-color: $primary-color;
+      &:nth-child(1) {
+        top: 20%;
+        transform: translate(-50%, 0);
+      }
+      &:nth-child(3) {
+        top: auto;
+        bottom: 20%;
+        transform: translate(-50%, 0);
+      }
+    }
+  }
+
+  // The menu items
+  #{&}__navitems {
+    background-color: $white-color;
+    width: 80%;
+    height: 100vh;
+    padding: 2rem 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    z-index: $zindex-100;
+    @include boxShadow;
+    @include transition;
+
+    @include respond(lg) {
+      opacity: 1;
+      visibility: visible;
+      background-color: transparent;
+      position: initial;
+      display: flex;
+      flex: auto;
+      justify-content: center;
+      transform: translateX(0);
+      padding: 0;
+      overflow-y: visible;
+      z-index: 0;
+      box-shadow: none;
+      transition: none;
+      margin: 0 4rem;
+      margin-right: 0;
+      height: 100%;
+    }
+
+    &.active {
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    // The extra stuff (button)
+    .header__extra {
+      padding: 0 2rem 2rem 2rem;
+      position: relative;
+
+      @include respond(lg) {
+        display: none;
+        visibility: hidden;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: calc(100% - 8rem);
+        height: 0.2rem;
+        background-color: $dark-gray-color;
+      }
+
+      .cta--search {
+        .form__group {
+          flex: 1;
+          margin-right: 2rem;
+        }
+
+        i {
+          color: $dark-gray-color;
+        }
+      }
+    }
+
+    // The menu items and submenus
+    .header__list {
+      position: relative;
+      a {
+        position: relative;
+        display: block;
+        font-size: 1.8rem;
+        padding: $header-menu-link-padding;
+        color: $body-text-color;
+
+        &.caret::before {
+          content: "";
+          width: 0.6rem;
+          height: 0.6rem;
+          border-top: 0.1rem solid $body-text-color;
+          border-left: 0.1rem solid $body-text-color;
+          display: block;
+          position: absolute;
+          top: 48%;
+          right: 4rem;
+          transform: translateY(-50%) rotate(225deg);
+
+          @include respond(lg) {
+            border-color: $off-white-color;
+            right: 0;
+          }
+        }
+
+        @include respond(lg) {
+          font-size: 1.4rem;
+          padding: 2.5rem 1.2rem;
+        }
+
+        @include respond(xl) {
+          font-size: 1.6rem;
+          padding: 2.5rem 1.6rem;
+        }
+      }
+
+      // when active or hovered
+      &.active > a,
+      &:hover > a,
+      > a:focus {
+        color: $primary-color;
+        font-weight: $bold-weight;
+        @include respond(lg) {
+          font-weight: $regular-weight;
+        }
+      }
+    }
+
+    // Submenus
+    .header__list > .header__submenu {
+      margin-left: 10%;
+      max-height: 0;
+      opacity: 0;
+      visibility: hidden;
+      @include transition;
+
+      .header__list {
+        & > a {
+          @include respond(lg) {
+            padding: 1.2rem $default-padding;
+          }
+        }
+
+        &:hover > a,
+        &.active > a {
+          background-color: $primary-color;
+          color: $off-white-color;
+        }
+      }
+
+      @include respond(lg) {
+        width: 22rem;
+        margin-left: 0;
+        background-color: $white-color;
+        padding: 0;
+        display: block;
+
+        position: absolute;
+        top: 160%;
+        max-height: initial;
+
+        @include boxShadow;
+      }
+
+      @include respond(xl) {
+        a {
+          font-size: 1.3rem;
+        }
+      }
+
+      a {
+        i {
+          @include respond(lg) {
+            right: $default-padding;
+          }
+        }
+
+        &::before {
+          @include respond(lg) {
+            transform: rotate(0deg);
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+    }
+
+    .header__list:hover > .header__submenu {
+      max-height: 100%;
+      opacity: 1;
+      visibility: visible;
+      @include respond(lg) {
+        max-height: initial;
+        top: 100%;
+      }
+    }
+
+    .header__submenu .header__submenu {
+      @include respond(lg) {
+        left: 130%;
+        @include transition;
+      }
+    }
+
+    .header__submenu .header__list:hover .header__submenu {
+      @include respond(lg) {
+        left: 100%;
+        top: 0;
+      }
+    }
+  }
+}
+
+// Manipulating header
+.header {
+  .bottom-nav {
+    @include transition;
+  }
+  &.fixed-header {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    z-index: $zindex-100;
+    .bottom-nav {
+      background-color: $body-text-color;
+    }
+  }
+
+  &.animate-header {
+    .bottom-nav,
+    .header__top-nav {
+      animation: slideDown 1s ease-in-out forwards;
+    }
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-10rem);
+    opacity: 0.5;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// Not really part of the navigation components ============================== //
+.header {
+  &__extra.desktop-version {
+    .search {
+      font-size: 3.5rem;
+      position: absolute;
+      top: 55%;
+      left: 55%;
+      transform: translate(-50%, -50%);
+    }
+
+    button {
+      background-color: transparent;
+      @include border($width: 0.1rem, $style: dotted, $color: transparent);
+
+      &:focus {
+        border-color: rgba($off-white-color, 0.4);
+      }
+    }
+
+    @include respond(lg) {
+      display: flex;
+      align-items: center;
+
+      .search {
+        margin-right: 2rem;
+        font-size: 2.5rem;
+        position: initial;
+        transform: translate(0, 0);
+      }
+    }
+  }
+}
+// Helper classes for the header for background and text color ====================== //
+.header {
+  // Deals with transparency
+  &.transparent {
+    background-color: transparent;
+    @include transition;
+  }
+
+  // Deals with white bg
+  &.white-bg {
+    background-color: $white-color;
+    @include boxShadow;
+    @include transition;
+
+    .header__mobile--icon span {
+      background-color: $primary-color;
+    }
+  }
+
+  // Deals with white bg
+  &.dark-bg {
+    background-color: $black-color;
+    @include boxShadow;
+    @include transition;
+
+    .header__mobile--icon span {
+      background-color: $primary-color;
+    }
+  }
+
+  // Makes links and text color inside the header white
+  &.light-text {
+    @include respond(lg) {
+      .header__navitems .header__list {
+        a {
+          color: $off-white-color;
+        }
+        // when active or hovered
+        &.active > a,
+        &:hover > a,
+        > a:focus {
+          color: $primary-color;
+        }
+      }
+      // Submenu
+      .header__navitems .header__submenu {
+        a {
+          color: $body-text-color;
+        }
+      }
+    }
+  }
+
+  // Makes links and text color inside the header black
+  &.dark-text {
+    @include respond(lg) {
+      .header__navitems .header__list {
+        a {
+          color: $black-color;
+        }
+        // when active or hovered
+        &.active > a,
+        &:hover > a {
+          color: $primary-color;
+        }
+      }
+      // Submenu
+      .header__navitems .header__submenu {
+        a {
+          color: $black-color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+/* Print */
+body {
+  visibility: hidden;
+}
+
+.printable {
+  visibility: visible;
+}

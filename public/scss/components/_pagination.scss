@@ -1,0 +1,28 @@
+// PAGINATION ====================================== //
+.pagination {
+  display: flex;
+  align-items: center;
+
+  .share-button {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  &__numbers {
+    margin: 0 $spacing-xs;
+    display: flex;
+    align-items: center;
+
+    .number {
+      margin: 0 $spacing-xs;
+      @include transition;
+      &.active {
+        background-color: $hover-primary-color;
+        border-color: $hover-primary-color;
+        color: $off-white-color;
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+  }
+}

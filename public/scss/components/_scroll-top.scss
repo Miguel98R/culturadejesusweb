@@ -1,0 +1,32 @@
+// SCROLL TO TOP ================================ //
+.scroll-to-top {
+  position: fixed;
+  bottom: 20%;
+  right: $spacing-sm;
+  z-index: 20;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 0.4rem;
+  padding: $spacing-sm;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+  background-color: $primary-color;
+  display: flex;
+  @include justify-align-center;
+  @include transition;
+
+  &:hover {
+    background-color: $hover-primary-color;
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  i {
+    font-size: 2rem;
+    color: $off-white-color;
+  }
+}

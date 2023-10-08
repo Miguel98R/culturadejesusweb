@@ -1,0 +1,54 @@
+// DONATIONS PAGE ===================================== //
+.ways-to-help,
+.subscription {
+  .card {
+    border: 0;
+    &:hover {
+      box-shadow: none;
+    }
+
+    .card__details {
+      top: auto;
+      bottom: $spacing-sm;
+    }
+
+    &.custom-height {
+      height: 50rem;
+      .card__header {
+        height: 50rem;
+      }
+    }
+  }
+
+  .order {
+    @include respond(md) {
+      order: 2;
+      margin-top: $spacing-sm;
+    }
+
+    @include respond(lg) {
+      order: 0;
+      margin-top: 0;
+    }
+  }
+
+  .scale {
+    transform: scale(1.1);
+    transform-origin: center;
+    position: relative;
+    z-index: 10;
+
+    @include respond(md) {
+      transform: scale(1);
+    }
+
+    @include respond(lg) {
+      transform: scale(1.15);
+    }
+  }
+}
+
+.subscription .scale,
+.subscription .scale:hover {
+  @include boxShadow($y: 0);
+}

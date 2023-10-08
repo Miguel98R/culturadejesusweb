@@ -1,0 +1,56 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-size: $base-font-size-sm;
+  @include respond(md) {
+    font-size: $base-font-size-md;
+  }
+  @include respond(lg) {
+    font-size: $base-font-size-lg;
+  }
+  @include respond(xl) {
+    font-size: $base-font-size-xl;
+  }
+}
+
+body {
+  font-family: $body-font-family;
+  width: 100%;
+  min-height: 100%;
+  background-color: $white-color;
+  color: $body-text-color;
+  font-weight: $regular-weight;
+  line-height: $line-height;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden !important;
+
+  font-size: 1.4rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+a,
+i,
+span {
+  display: inline-block;
+}
+
+i {
+  color: $primary-color;
+  @include transition($property: color);
+}
+
+a {
+  color: $primary-color;
+  @include transition;
+  &:hover {
+    color: $hover-primary-color;
+  }
+}

@@ -1,0 +1,437 @@
+.container {
+  width: $width-container-sm;
+  margin: 0 auto;
+
+  @include respond(md) {
+    width: $width-container-md;
+  }
+
+  @include respond(lg) {
+    max-width: $width-container-lg;
+  }
+
+  @include respond(xl) {
+    max-width: $width-container-xl;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$gutter-padding-horizontal;
+  margin-right: -$gutter-padding-horizontal;
+
+  [class*="flex-"] {
+    width: 100%;
+    max-width: 100%;
+    padding-right: $gutter-padding-horizontal;
+    padding-left: $gutter-padding-horizontal;
+    min-height: 0.1rem;
+    margin-bottom: $gutter-margin-vertical;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &.no-gutter {
+    margin-left: 0;
+    margin-right: 0;
+    [class*="flex-"] {
+      padding-left: 0;
+      padding-right: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  // Small devices - phone portrait ==================================== //
+
+  // removing the margin from the bottom
+  .flex-sm-1,
+  .flex-sm-2,
+  .flex-sm-3,
+  .flex-sm-4,
+  .flex-sm-5,
+  .flex-sm-6,
+  .flex-sm-7,
+  .flex-sm-8,
+  .flex-sm-9,
+  .flex-sm-10,
+  .flex-sm-11,
+  .flex-sm-12 {
+    @include respond(sm) {
+      margin-bottom: 0;
+    }
+  }
+
+  .flex-sm-1 {
+    @include respond(sm) {
+      @include grid(12);
+    }
+  }
+
+  .flex-sm-2 {
+    @include respond(sm) {
+      @include grid(6);
+    }
+  }
+
+  .flex-sm-3 {
+    @include respond(sm) {
+      @include grid(4);
+    }
+  }
+
+  .flex-sm-4 {
+    @include respond(sm) {
+      @include grid(3);
+    }
+  }
+
+  .flex-sm-5 {
+    @include respond(sm) {
+      flex: 0 0 percentage((5 / 12));
+      max-width: percentage((5 / 12));
+    }
+  }
+
+  .flex-sm-6 {
+    @include respond(sm) {
+      @include grid(2);
+    }
+  }
+
+  .flex-sm-7 {
+    @include respond(sm) {
+      flex: 0 0 percentage((7 / 12));
+      max-width: percentage((7 / 12));
+    }
+  }
+
+  .flex-sm-8 {
+    @include respond(sm) {
+      flex: 0 0 percentage((8 / 12));
+      max-width: percentage((8 / 12));
+    }
+  }
+
+  .flex-sm-9 {
+    @include respond(sm) {
+      flex: 0 0 percentage((9 / 12));
+      max-width: percentage((9 / 12));
+    }
+  }
+
+  .flex-sm-10 {
+    @include respond(sm) {
+      flex: 0 0 percentage((10 / 12));
+      max-width: percentage((10 / 12));
+    }
+  }
+
+  .flex-sm-11 {
+    @include respond(sm) {
+      flex: 0 0 percentage((11 / 12));
+      max-width: percentage((11 / 12));
+    }
+  }
+
+  .flex-sm-12 {
+    @include respond(sm) {
+      @include grid(1);
+    }
+  }
+
+  // Medium devices - phone landscape & tablet portrait ==================================== //
+
+  // removing the margin from the bottom
+  .flex-md-1,
+  .flex-md-2,
+  .flex-md-3,
+  .flex-md-4,
+  .flex-md-5,
+  .flex-md-6,
+  .flex-md-7,
+  .flex-md-8,
+  .flex-md-9,
+  .flex-md-10,
+  .flex-md-11,
+  .flex-md-12 {
+    @include respond(md) {
+      margin-bottom: 0;
+    }
+  }
+
+  .flex-md-1 {
+    @include respond(md) {
+      @include grid(12);
+    }
+  }
+
+  .flex-md-2 {
+    @include respond(md) {
+      @include grid(6);
+    }
+  }
+
+  .flex-md-3 {
+    @include respond(md) {
+      @include grid(4);
+    }
+  }
+
+  .flex-md-4 {
+    @include respond(md) {
+      @include grid(3);
+    }
+  }
+
+  .flex-md-5 {
+    @include respond(md) {
+      flex: 0 0 percentage((5 / 12));
+      max-width: percentage((5 / 12));
+    }
+  }
+
+  .flex-md-6 {
+    @include respond(md) {
+      @include grid(2);
+    }
+  }
+
+  .flex-md-7 {
+    @include respond(md) {
+      flex: 0 0 percentage((7 / 12));
+      max-width: percentage((7 / 12));
+    }
+  }
+
+  .flex-md-8 {
+    @include respond(md) {
+      flex: 0 0 percentage((8 / 12));
+      max-width: percentage((8 / 12));
+    }
+  }
+
+  .flex-md-9 {
+    @include respond(md) {
+      flex: 0 0 percentage((9 / 12));
+      max-width: percentage((9 / 12));
+    }
+  }
+
+  .flex-md-10 {
+    @include respond(md) {
+      flex: 0 0 percentage((10 / 12));
+      max-width: percentage((10 / 12));
+    }
+  }
+
+  .flex-md-11 {
+    @include respond(md) {
+      flex: 0 0 percentage((11 / 12));
+      max-width: percentage((11 / 12));
+    }
+  }
+
+  .flex-md-12 {
+    @include respond(md) {
+      @include grid(1);
+    }
+  }
+
+  // Large devices - tablet landscape & laptops ==================================== //
+
+  // removing the margin from the bottom
+  .flex-lg-1,
+  .flex-lg-2,
+  .flex-lg-3,
+  .flex-lg-4,
+  .flex-lg-5,
+  .flex-lg-6,
+  .flex-lg-7,
+  .flex-lg-8,
+  .flex-lg-9,
+  .flex-lg-10,
+  .flex-lg-11,
+  .flex-lg-12 {
+    @include respond(lg) {
+      margin-bottom: 0;
+    }
+  }
+
+  .flex-lg-1 {
+    @include respond(lg) {
+      @include grid(12);
+    }
+  }
+
+  .flex-lg-2 {
+    @include respond(lg) {
+      @include grid(6);
+    }
+  }
+
+  .flex-lg-3 {
+    @include respond(lg) {
+      @include grid(4);
+    }
+  }
+
+  .flex-lg-4 {
+    @include respond(lg) {
+      @include grid(3);
+    }
+  }
+
+  .flex-lg-5 {
+    @include respond(lg) {
+      flex: 0 0 percentage((5 / 12));
+      max-width: percentage((5 / 12));
+    }
+  }
+
+  .flex-lg-6 {
+    @include respond(lg) {
+      @include grid(2);
+    }
+  }
+
+  .flex-lg-7 {
+    @include respond(lg) {
+      flex: 0 0 percentage((7 / 12));
+      max-width: percentage((7 / 12));
+    }
+  }
+
+  .flex-lg-8 {
+    @include respond(lg) {
+      flex: 0 0 percentage((8 / 12));
+      max-width: percentage((8 / 12));
+    }
+  }
+
+  .flex-lg-9 {
+    @include respond(lg) {
+      flex: 0 0 percentage((9 / 12));
+      max-width: percentage((9 / 12));
+    }
+  }
+
+  .flex-lg-10 {
+    @include respond(lg) {
+      flex: 0 0 percentage((10 / 12));
+      max-width: percentage((10 / 12));
+    }
+  }
+
+  .flex-lg-11 {
+    @include respond(lg) {
+      flex: 0 0 percentage((11 / 12));
+      max-width: percentage((11 / 12));
+    }
+  }
+
+  .flex-lg-12 {
+    @include respond(lg) {
+      @include grid(1);
+    }
+  }
+
+  // XLarge devices - large desktop (FHD, UltraWide, etc...) ==================================== //
+
+  // removing the margin from the bottom
+  .flex-xl-1,
+  .flex-xl-2,
+  .flex-xl-3,
+  .flex-xl-4,
+  .flex-xl-5,
+  .flex-xl-6,
+  .flex-xl-7,
+  .flex-xl-8,
+  .flex-xl-9,
+  .flex-xl-10,
+  .flex-xl-11,
+  .flex-xl-12 {
+    @include respond(xl) {
+      margin-bottom: 0;
+    }
+  }
+
+  .flex-xl-1 {
+    @include respond(xl) {
+      @include grid(12);
+    }
+  }
+
+  .flex-xl-2 {
+    @include respond(xl) {
+      @include grid(6);
+    }
+  }
+
+  .flex-xl-3 {
+    @include respond(xl) {
+      @include grid(4);
+    }
+  }
+
+  .flex-xl-4 {
+    @include respond(xl) {
+      @include grid(3);
+    }
+  }
+
+  .flex-xl-5 {
+    @include respond(xl) {
+      flex: 0 0 percentage((5 / 12));
+      max-width: percentage((5 / 12));
+    }
+  }
+
+  .flex-xl-6 {
+    @include respond(xl) {
+      @include grid(2);
+    }
+  }
+
+  .flex-xl-7 {
+    @include respond(xl) {
+      flex: 0 0 percentage((7 / 12));
+      max-width: percentage((7 / 12));
+    }
+  }
+
+  .flex-xl-8 {
+    @include respond(xl) {
+      flex: 0 0 percentage((8 / 12));
+      max-width: percentage((8 / 12));
+    }
+  }
+
+  .flex-xl-9 {
+    @include respond(xl) {
+      flex: 0 0 percentage((9 / 12));
+      max-width: percentage((9 / 12));
+    }
+  }
+
+  .flex-xl-10 {
+    @include respond(xl) {
+      flex: 0 0 percentage((10 / 12));
+      max-width: percentage((10 / 12));
+    }
+  }
+
+  .flex-xl-11 {
+    @include respond(xl) {
+      flex: 0 0 percentage((11 / 12));
+      max-width: percentage((11 / 12));
+    }
+  }
+
+  .flex-xl-12 {
+    @include respond(xl) {
+      @include grid(1);
+    }
+  }
+}

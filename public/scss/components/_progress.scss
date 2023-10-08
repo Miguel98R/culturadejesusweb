@@ -1,0 +1,32 @@
+// PROGRESS FOR THE DONATION =========================== //
+.progress {
+  width: 100%;
+
+  &__context {
+    display: flex;
+    @include justify-between;
+    text-transform: capitalize;
+    .end {
+      font-weight: $bold-weight;
+      color: $primary-color;
+    }
+  }
+
+  &__bar {
+    background-color: $off-white-color;
+    height: 1.8rem;
+    position: relative;
+    overflow: hidden;
+    @include respond(lg) {
+      height: 1.2rem;
+    }
+    .fill {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background-color: $primary-color;
+      @include transition($property: width);
+    }
+  }
+}

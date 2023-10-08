@@ -1,0 +1,14 @@
+// ELEMENTS ==================================== //
+.elements#grid .row:not(:last-child) {
+  border-bottom: 0.2rem solid $off-white-color;
+  padding-bottom: 2rem;
+}
+
+.elements#grid [class*="flex-"]:not(:last-child) {
+  border-bottom: 0.2rem solid $off-white-color;
+
+  @include respond(lg) {
+    border-bottom: 0;
+    border-right: 0.2rem solid $off-white-color;
+  }
+}

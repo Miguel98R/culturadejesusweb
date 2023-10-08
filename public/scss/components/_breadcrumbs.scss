@@ -1,0 +1,10 @@
+// BREADCRUMBS =============================== //
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  width: 100%;
+  span {
+    margin: $spacing-xs;
+  }
+}

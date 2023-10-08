@@ -1,0 +1,39 @@
+// PODCASTS ============================== //
+.podcast {
+  // card
+  &__playlist--item {
+    display: flex;
+    align-items: center;
+
+    .icon {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      font-size: 2rem;
+      display: flex;
+      @include justify-align-center;
+      @include border($color: $primary-color);
+    }
+
+    .right {
+      margin-left: $spacing-sm;
+      flex: auto;
+    }
+
+    span {
+      display: block;
+    }
+
+    a {
+      display: block;
+      .podcast__playlist--title {
+        color: $body-text-color;
+        @include transition($property: color);
+      }
+
+      &:hover .podcast__playlist--title {
+        color: $hover-primary-color;
+      }
+    }
+  }
+}

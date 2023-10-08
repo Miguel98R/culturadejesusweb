@@ -1,0 +1,13 @@
+// SINGLE (MINISTRIES) ============================= //
+.single-ministry {
+  // CTA
+  &__cta {
+    background: {
+      image: linear-gradient(rgba($body-text-color, 0.7), rgba($body-text-color, 0.7)),
+        url("../../images/ministry-single-cta.jpg");
+      position: center center;
+      size: cover;
+      repeat: no-repeat;
+    }
+  }
+}

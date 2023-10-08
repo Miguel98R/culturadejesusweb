@@ -1,0 +1,44 @@
+doctype html
+html(lang='es')
+  include templates/head
+  body
+    header.header.light-text(data-onscroll-classes='fixed-header animate-header')
+      include templates/nav
+    main
+      section.banner.single-banner-minitries.full-width
+        .container
+          .banner__content
+            .section-heading
+              span.section-intro Conoce nuestros
+              h1 Ministerios y áreas
+            .breadcrumb
+              .breadcrumb__home--link
+                a(href='/') Home
+              span /
+              .breadcrumb__current--page-link Ministerios
+      .inner-pages-header.default-section-spacing
+        .container
+          .section-heading.text-center-sm
+            span.section-intro Ministerios
+            h2 Nuestros Ministerios
+
+      include templates/grid_ministerios
+
+      //.inner-pages-navigation.pad-t-sm-4.pad-b-sm-4
+        .container
+          .pagination
+            button.pagination__arrow.arrow-left.transparent.button--primary.button--outline.button.share-button
+              i.ri-arrow-left-s-line
+            .pagination__numbers
+              button.number.transparent.button--primary.button--outline.button.share-button 1
+              |  
+              button.number.transparent.button--primary.button--outline.button.share-button.active 2
+              |  
+              button.number.transparent.button--primary.button--outline.button.share-button 3
+            button.pagination__arrow.arrow-right.transparent.button--primary.button--outline.button.share-button
+              i.ri-arrow-right-s-line
+    .scroll-to-top
+      i.ri-arrow-up-line
+
+    include templates/footer
+    include templates/scripts

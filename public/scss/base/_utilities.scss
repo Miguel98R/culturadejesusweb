@@ -1,0 +1,804 @@
+.text-center-sm {
+  @include respond(sm) {
+    text-align: center !important;
+  }
+}
+
+.text-center-md {
+  @include respond(md) {
+    text-align: center !important;
+  }
+}
+
+.text-center-lg {
+  @include respond(lg) {
+    text-align: center !important;
+  }
+}
+
+.text-center-xl {
+  @include respond(xl) {
+    text-align: center !important;
+  }
+}
+
+.text-left-sm {
+  @include respond(sm) {
+    text-align: left !important;
+  }
+}
+
+.text-left-md {
+  @include respond(md) {
+    text-align: left !important;
+  }
+}
+
+.text-left-lg {
+  @include respond(lg) {
+    text-align: left !important;
+  }
+}
+
+.text-left-xl {
+  @include respond(xl) {
+    text-align: left !important;
+  }
+}
+
+.text-right-sm {
+  @include respond(sm) {
+    text-align: right !important;
+  }
+}
+.text-right-md {
+  @include respond(md) {
+    text-align: right !important;
+  }
+}
+.text-right-lg {
+  @include respond(lg) {
+    text-align: right !important;
+  }
+}
+.text-right-xl {
+  @include respond(xl) {
+    text-align: right !important;
+  }
+}
+
+.uppercase {
+  text-transform: uppercase !important;
+}
+
+.underline {
+  text-decoration: underline !important;
+}
+
+.regular-weight {
+  font-weight: $regular-weight !important;
+}
+
+.bold {
+  font-weight: $bold-weight !important;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.no-shadow {
+  box-shadow: none !important;
+}
+
+// ==== TYPOGRAPHY === //
+
+// ==== ALIGNMENT === //
+
+// Fixed
+.fixed {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  z-index: $zindex-100;
+}
+
+// Will display normal flex with direction: row
+.display-flex {
+  display: flex;
+}
+
+// Will display normal flex with direction: column
+.display-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Align content of a flex container to each end horizontally (parent element must have display: flex) - flex-direction: row <- default
+.justify-content-between {
+  justify-content: space-between !important;
+}
+
+// Align content of a flex container to the center horizontally (parent element must have display: flex) - flex-direction: row <- default
+.justify-content-center {
+  justify-content: center !important;
+}
+
+// Align content of a flex container to the end horizontally (parent element must have display: flex) - flex-direction: row <- default
+.justify-content-end {
+  justify-content: flex-end !important;
+}
+
+// Align content of a flex container to the center vertically (parent element must have display: flex) - flex-direction: row <- default
+.align-items-center {
+  align-items: center !important;
+}
+
+// Align content of a flex container to the end vertically (parent element must have display: flex) - flex-direction: row <- default
+.align-items-end {
+  align-items: flex-end !important;
+}
+
+// Align content of a flex container to the center both horizontally and vertically (parent element must have display: flex) - flex-direction: row <- default
+.justify-align-center {
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+// === WHITESPACE === //
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.default-section-spacing {
+  padding-top: $section-default-spacing;
+  padding-bottom: $section-default-spacing;
+}
+
+// ======= MARGIN TOP ======= //
+
+// Extra small spacing - 0.6rem
+.mar-t-sm-06 {
+  @include respond(sm) {
+    margin-top: $spacing-xs !important;
+  }
+}
+.mar-t-md-06 {
+  @include respond(md) {
+    margin-top: $spacing-xs !important;
+  }
+}
+.mar-t-lg-06 {
+  @include respond(lg) {
+    margin-top: $spacing-xs !important;
+  }
+}
+.mar-t-xl-06 {
+  @include respond(xl) {
+    margin-top: $spacing-xs !important;
+  }
+}
+
+// Small spacing - 2rem
+.mar-t-sm-2 {
+  @include respond(sm) {
+    margin-top: $spacing-sm !important;
+  }
+}
+.mar-t-md-2 {
+  @include respond(md) {
+    margin-top: $spacing-sm !important;
+  }
+}
+.mar-t-lg-2 {
+  @include respond(lg) {
+    margin-top: $spacing-sm !important;
+  }
+}
+.mar-t-xl-2 {
+  @include respond(xl) {
+    margin-top: $spacing-sm !important;
+  }
+}
+
+// Medium spacing - 4rem
+.mar-t-sm-4 {
+  @include respond(sm) {
+    margin-top: $spacing-md !important;
+  }
+}
+.mar-t-md-4 {
+  @include respond(md) {
+    margin-top: $spacing-md !important;
+  }
+}
+.mar-t-lg-4 {
+  @include respond(lg) {
+    margin-top: $spacing-md !important;
+  }
+}
+.mar-t-xl-4 {
+  @include respond(xl) {
+    margin-top: $spacing-md !important;
+  }
+}
+
+// Large spacing - 6rem
+.mar-t-sm-6 {
+  @include respond(sm) {
+    margin-top: $spacing-lg !important;
+  }
+}
+.mar-t-md-6 {
+  @include respond(md) {
+    margin-top: $spacing-lg !important;
+  }
+}
+.mar-t-lg-6 {
+  @include respond(lg) {
+    margin-top: $spacing-lg !important;
+  }
+}
+.mar-t-xl-6 {
+  @include respond(xl) {
+    margin-top: $spacing-lg !important;
+  }
+}
+
+// Extra large spacing - 8rem
+.mar-t-sm-8 {
+  @include respond(sm) {
+    margin-top: $spacing-xl !important;
+  }
+}
+.mar-t-md-8 {
+  @include respond(md) {
+    margin-top: $spacing-xl !important;
+  }
+}
+.mar-t-lg-8 {
+  @include respond(lg) {
+    margin-top: $spacing-xl !important;
+  }
+}
+.mar-t-xl-8 {
+  @include respond(xl) {
+    margin-top: $spacing-xl !important;
+  }
+}
+
+// ======= MARGIN BOTTOM ======= //
+
+// Extra small spacing - 0.6rem
+.mar-b-sm-06 {
+  @include respond(sm) {
+    margin-bottom: $spacing-xs !important;
+  }
+}
+.mar-b-md-06 {
+  @include respond(md) {
+    margin-bottom: $spacing-xs !important;
+  }
+}
+.mar-b-lg-06 {
+  @include respond(lg) {
+    margin-bottom: $spacing-xs !important;
+  }
+}
+.mar-b-xl-06 {
+  @include respond(xl) {
+    margin-bottom: $spacing-xs !important;
+  }
+}
+
+// Small spacing - 2rem
+.mar-b-sm-2 {
+  @include respond(sm) {
+    margin-bottom: $spacing-sm !important;
+  }
+}
+.mar-b-md-2 {
+  @include respond(md) {
+    margin-bottom: $spacing-sm !important;
+  }
+}
+.mar-b-lg-2 {
+  @include respond(lg) {
+    margin-bottom: $spacing-sm !important;
+  }
+}
+.mar-b-xl-2 {
+  @include respond(xl) {
+    margin-bottom: $spacing-sm !important;
+  }
+}
+
+// Medium spacing - 4rem
+.mar-b-sm-4 {
+  @include respond(sm) {
+    margin-bottom: $spacing-md !important;
+  }
+}
+.mar-b-md-4 {
+  @include respond(md) {
+    margin-bottom: $spacing-md !important;
+  }
+}
+.mar-b-lg-4 {
+  @include respond(lg) {
+    margin-bottom: $spacing-md !important;
+  }
+}
+.mar-b-xl-4 {
+  @include respond(xl) {
+    margin-bottom: $spacing-md !important;
+  }
+}
+
+// Large spacing - 6rem
+.mar-b-sm-6 {
+  @include respond(sm) {
+    margin-bottom: $spacing-lg !important;
+  }
+}
+.mar-b-md-6 {
+  @include respond(md) {
+    margin-bottom: $spacing-lg !important;
+  }
+}
+.mar-b-lg-6 {
+  @include respond(lg) {
+    margin-bottom: $spacing-lg !important;
+  }
+}
+.mar-b-xl-6 {
+  @include respond(xl) {
+    margin-bottom: $spacing-lg !important;
+  }
+}
+
+// Extra large spacing - 8rem
+.mar-b-sm-8 {
+  @include respond(sm) {
+    margin-bottom: $spacing-xl !important;
+  }
+}
+.mar-b-md-8 {
+  @include respond(md) {
+    margin-bottom: $spacing-xl !important;
+  }
+}
+.mar-b-lg-8 {
+  @include respond(lg) {
+    margin-bottom: $spacing-xl !important;
+  }
+}
+.mar-b-xl-8 {
+  @include respond(xl) {
+    margin-bottom: $spacing-xl !important;
+  }
+}
+
+// ===== PADDING TOP ====== //
+
+// Extra small spacing - 0.6rem
+.pad-t-sm-06 {
+  @include respond(sm) {
+    padding-top: $spacing-xs !important;
+  }
+}
+.pad-t-md-06 {
+  @include respond(md) {
+    padding-top: $spacing-xs !important;
+  }
+}
+.pad-t-lg-06 {
+  @include respond(lg) {
+    padding-top: $spacing-xs !important;
+  }
+}
+.pad-t-xl-06 {
+  @include respond(xl) {
+    padding-top: $spacing-xs !important;
+  }
+}
+
+// Small spacing - 2rem
+.pad-t-sm-2 {
+  @include respond(sm) {
+    padding-top: $spacing-sm !important;
+  }
+}
+.pad-t-md-2 {
+  @include respond(md) {
+    padding-top: $spacing-sm !important;
+  }
+}
+.pad-t-lg-2 {
+  @include respond(lg) {
+    padding-top: $spacing-sm !important;
+  }
+}
+.pad-t-xl-2 {
+  @include respond(xl) {
+    padding-top: $spacing-sm !important;
+  }
+}
+
+// Medium spacing - 4rem
+.pad-t-sm-4 {
+  @include respond(sm) {
+    padding-top: $spacing-md !important;
+  }
+}
+.pad-t-md-4 {
+  @include respond(md) {
+    padding-top: $spacing-md !important;
+  }
+}
+.pad-t-lg-4 {
+  @include respond(lg) {
+    padding-top: $spacing-md !important;
+  }
+}
+.pad-t-xl-4 {
+  @include respond(xl) {
+    padding-top: $spacing-md !important;
+  }
+}
+
+// Large spacing - 6rem
+.pad-t-sm-6 {
+  @include respond(sm) {
+    padding-top: $spacing-lg !important;
+  }
+}
+.pad-t-md-6 {
+  @include respond(md) {
+    padding-top: $spacing-lg !important;
+  }
+}
+.pad-t-lg-6 {
+  @include respond(lg) {
+    padding-top: $spacing-lg !important;
+  }
+}
+.pad-t-xl-6 {
+  @include respond(xl) {
+    padding-top: $spacing-lg !important;
+  }
+}
+
+// Extra large spacing - 8rem
+.pad-t-sm-8 {
+  @include respond(sm) {
+    padding-top: $spacing-xl !important;
+  }
+}
+.pad-t-md-8 {
+  @include respond(md) {
+    padding-top: $spacing-xl !important;
+  }
+}
+.pad-t-lg-8 {
+  @include respond(lg) {
+    padding-top: $spacing-xl !important;
+  }
+}
+.pad-t-xl-8 {
+  @include respond(xl) {
+    padding-top: $spacing-xl !important;
+  }
+}
+
+// ======= PADDING BOTTOM ======= //
+
+// Extra small spacing - 0.6rem
+.pad-b-sm-06 {
+  @include respond(sm) {
+    padding-bottom: $spacing-xs !important;
+  }
+}
+.pad-b-md-06 {
+  @include respond(md) {
+    padding-bottom: $spacing-xs !important;
+  }
+}
+.pad-b-lg-06 {
+  @include respond(lg) {
+    padding-bottom: $spacing-xs !important;
+  }
+}
+.pad-b-xl-06 {
+  @include respond(xl) {
+    padding-bottom: $spacing-xs !important;
+  }
+}
+
+// Small spacing - 2rem
+.pad-b-sm-2 {
+  @include respond(sm) {
+    padding-bottom: $spacing-sm !important;
+  }
+}
+.pad-b-md-2 {
+  @include respond(md) {
+    padding-bottom: $spacing-sm !important;
+  }
+}
+.pad-b-lg-2 {
+  @include respond(lg) {
+    padding-bottom: $spacing-sm !important;
+  }
+}
+.pad-b-xl-2 {
+  @include respond(xl) {
+    padding-bottom: $spacing-sm !important;
+  }
+}
+
+// Medium spacing - 4rem
+.pad-b-sm-4 {
+  @include respond(sm) {
+    padding-bottom: $spacing-md !important;
+  }
+}
+.pad-b-md-4 {
+  @include respond(md) {
+    padding-bottom: $spacing-md !important;
+  }
+}
+.pad-b-lg-4 {
+  @include respond(lg) {
+    padding-bottom: $spacing-md !important;
+  }
+}
+.pad-b-xl-4 {
+  @include respond(xl) {
+    padding-bottom: $spacing-md !important;
+  }
+}
+
+// Large spacing - 6rem
+.pad-b-sm-6 {
+  @include respond(sm) {
+    padding-bottom: $spacing-lg !important;
+  }
+}
+.pad-b-md-6 {
+  @include respond(md) {
+    padding-bottom: $spacing-lg !important;
+  }
+}
+.pad-b-lg-6 {
+  @include respond(lg) {
+    padding-bottom: $spacing-lg !important;
+  }
+}
+.pad-b-xl-6 {
+  @include respond(xl) {
+    padding-bottom: $spacing-lg !important;
+  }
+}
+
+// Extra large spacing - 8rem
+.pad-b-sm-8 {
+  @include respond(sm) {
+    padding-bottom: $spacing-xl !important;
+  }
+}
+.pad-b-md-8 {
+  @include respond(md) {
+    padding-bottom: $spacing-xl !important;
+  }
+}
+.pad-b-lg-8 {
+  @include respond(lg) {
+    padding-bottom: $spacing-xl !important;
+  }
+}
+.pad-b-xl-8 {
+  @include respond(xl) {
+    padding-bottom: $spacing-xl !important;
+  }
+}
+
+// ========== REMOVING SPACING ============ //
+
+// ======= NO MARGIN TOP ======= //
+
+.mar-t-sm-0 {
+  @include respond(sm) {
+    margin-top: 0 !important;
+  }
+}
+.mar-t-md-0 {
+  @include respond(md) {
+    margin-top: 0 !important;
+  }
+}
+.mar-t-lg-0 {
+  @include respond(lg) {
+    margin-top: 0 !important;
+  }
+}
+.mar-t-xl-0 {
+  @include respond(xl) {
+    margin-top: 0 !important;
+  }
+}
+
+// ======= NO MARGIN BOTTOM ======= //
+
+.mar-b-sm-0 {
+  @include respond(sm) {
+    margin-bottom: 0 !important;
+  }
+}
+.mar-b-md-0 {
+  @include respond(md) {
+    margin-bottom: 0 !important;
+  }
+}
+.mar-b-lg-0 {
+  @include respond(lg) {
+    margin-bottom: 0 !important;
+  }
+}
+.mar-b-xl-0 {
+  @include respond(xl) {
+    margin-bottom: 0 !important;
+  }
+}
+
+// ======= NO PADDING TOP ======= //
+
+.pad-t-sm-0 {
+  @include respond(sm) {
+    padding-top: 0 !important;
+  }
+}
+.pad-t-md-0 {
+  @include respond(md) {
+    padding-top: 0 !important;
+  }
+}
+.pad-t-lg-0 {
+  @include respond(lg) {
+    padding-top: 0 !important;
+  }
+}
+.pad-t-xl-0 {
+  @include respond(xl) {
+    padding-top: 0 !important;
+  }
+}
+
+// ======= NO PADDING BOTTOM ======= //
+
+.pad-b-sm-0 {
+  @include respond(sm) {
+    padding-bottom: 0 !important;
+  }
+}
+.pad-b-md-0 {
+  @include respond(md) {
+    padding-bottom: 0 !important;
+  }
+}
+.pad-b-lg-0 {
+  @include respond(lg) {
+    padding-bottom: 0 !important;
+  }
+}
+.pad-b-xl-0 {
+  @include respond(xl) {
+    padding-bottom: 0 !important;
+  }
+}
+
+.full-width {
+  // will make the selected element 100% of its parent's width
+  width: 100% !important;
+}
+
+.full-screen {
+  // will make the selected element fill the whole viewport
+  width: 100% !important;
+  height: 100vh !important;
+}
+
+.full-viewport-height {
+  // will make the selected element 100vh of the viewport height
+  height: 100vh !important;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+  @include respond(lg) {
+    overflow-y: scroll;
+  }
+}
+
+// =============== COLORS ======================== //
+.text-white {
+  color: $white-color !important;
+}
+
+.transparent {
+  background-color: transparent;
+}
+
+// === VISIBILITY HELPER CLASSES === //
+.hide {
+  // hide on all devices
+  display: none;
+  visibility: hidden;
+}
+
+.hide-on-sm {
+  // hide on small devices
+  @include respond(sm) {
+    display: none;
+    visibility: hidden;
+  }
+}
+.hide-on-md {
+  // hide on medium size devices
+  @include respond(md) {
+    display: none;
+    visibility: hidden;
+  }
+}
+.hide-on-lg {
+  // hide on large size devices
+  @include respond(lg) {
+    display: none;
+    visibility: hidden;
+  }
+}
+.hide-on-xl {
+  // hide on extra large devices
+  @include respond(xl) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+// Showing
+.show-on-sm {
+  // show on small devices
+  @include respond(sm) {
+    display: block;
+    visibility: visible;
+  }
+}
+
+.show-on-md {
+  // show on medium size devices
+  @include respond(md) {
+    display: block;
+    visibility: visible;
+  }
+}
+
+.show-on-lg {
+  // show on large size devices
+  @include respond(lg) {
+    display: block;
+    visibility: visible;
+  }
+}
+
+.show-on-xl {
+  // show on extra large devices
+  @include respond(xl) {
+    display: block;
+    visibility: visible;
+  }
+}

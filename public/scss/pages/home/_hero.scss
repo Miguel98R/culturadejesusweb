@@ -1,0 +1,18 @@
+// ALL HERO SECTIONS ======================================= //
+.hero {
+  padding-top: 10rem;
+  height: 100vh;
+  margin-top: -20vh;
+  position: relative;
+  overflow: hidden;
+
+  &.hero--regular {
+    background: {
+      image: linear-gradient(rgba($body-text-color, 0.7), rgba($body-text-color, 0.7)),
+        url("../../images/home-1-hero.jpg");
+      position: center center;
+      size: cover;
+      repeat: no-repeat;
+    }
+  }
+}

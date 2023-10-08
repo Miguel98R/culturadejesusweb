@@ -1,0 +1,380 @@
+doctype html
+html(lang='es')
+  include templates/head
+  body
+    header.header.light-text(data-onscroll-classes='fixed-header animate-header')
+      include templates/nav
+    main
+      section.banner.full-width
+        .container
+          .banner__content
+            .section-heading
+              span.section-intro Jesus is Lord
+              h1 About us
+            .breadcrumb
+              .breadcrumb__home--link
+                a(href='index ') Home
+              span /
+              .breadcrumb__current--page-link About
+      section.welcome.welcome--2.welcome--about.pad-t-sm-2.pad-b-sm-2.pad-t-lg-4.pad-b-lg-4
+        .welcome__content
+          .container
+            .row.align-items-center.default-section-spacing.pad-b-sm-0.mar-b-lg-4
+              .flex-lg-6
+                .section-heading
+                  span.section-intro Welcome
+                  h2 A warm welcome from us
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ipsum quae, ullam officia ratione earum aliquam reiciendis culpa. Fugiat quia iusto provident doloremque! Incidunt, magnam. Itaque voluptatem utiure temporibus harum dolorem totam quidem iste animi similique eum repellendus aspernatur perspiciatis doloribus incidunt nemo ratione voluptate veniam sequi tenetur, non exercitationem quo quam. Blanditiis
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ipsum quae, ullam officia ratione earum aliquam reiciendis culpa. Fugiat quia iusto provident doloremque! Incidunt, magnam. Itaque voluptatem utiure temporibus harum dolorem totam quidem iste animi similique eum repellendus aspernatur perspiciatis doloribus.
+              .flex-lg-6
+                .image-box.mar-t-sm-8.mar-t-lg-0.mar-b-sm-8.mar-b-lg-0
+                  .box.box--center
+                    img(src='/public/images/standing-girl.jpg', alt)
+                  .box.box--top-right
+                    img(src='/public/images/happy-kid.jpg', alt)
+                  .box.box--bottom-right
+                    img(src='/public/images/singing-girl.jpg', alt)
+                  .box.box--top-left
+                    img(src='/public/images/church-bldg-sm.jpg', alt)
+                  .box.box--bottom-left
+                    img(src='/public/images/bible-sm.jpg', alt)
+      section.mission-vision.default-section-spacing
+        .mission-vision__content
+          .container
+            .section-heading.text-center-md.color-off-white
+              span.section-intro.color-off-white Mission
+              h2 Our mission and vision
+            .row
+              .flex-md-6
+                .mission-vision__box.mission
+                  h3.mar-b-sm-2 Our mission
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, repellat? Inventore totam repudiandae architecto sint, est aspernatur quis dolore consequuntur, explicabo nobis illum facere, voluptatum odio in cupiditate rem culpa.
+                  p Iusto, eveniet quibusdam totam doloribus aperiam, nam placeat amet tempore nesciunt magni sed ut asperiores? Cupiditate, explicabo atque rem quos mollitia repellat quod perferendis amet ipsum nam voluptatum, ut maiores?
+                  p Dolores dolor itaque placeat eos harum minus iste sapiente ullam. Impedit vitae nulla exercitationem sapiente placeat nesciunt tempora ullam asperiores itaque pariatur dolorem ipsa molestias provident alias et, est facere?
+              .flex-md-6
+                .mission-vision__box.mission
+                  h3.mar-b-sm-2 Our vision
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, repellat? Inventore totam repudiandae architecto sint, est aspernatur quis dolore consequuntur, explicabo nobis illum facere, voluptatum odio in cupiditate rem culpa.
+                  p Iusto, eveniet quibusdam totam doloribus aperiam, nam placeat amet tempore nesciunt magni sed ut asperiores? Cupiditate, explicabo atque rem quos mollitia repellat quod perferendis amet ipsum nam voluptatum, ut maiores?
+                  p Dolores dolor itaque placeat eos harum minus iste sapiente ullam. Impedit vitae nulla exercitationem sapiente placeat nesciunt tempora ullam asperiores itaque pariatur dolorem ipsa molestias provident alias et, est facere?
+      section.our-leaders.default-section-spacing.text-center-sm
+        .container
+          .section-heading
+            span.section-intro Staffs
+            h2 Some of our leaders
+          #our-leaders-carousel.our-leaders__carousel.owl-carousel
+            .card.staff
+              .card__header.no-overlay
+                img.card__image(src='/public/images/user-5.jpg', alt)
+              .card__body
+                h3.cause__tile.mar-b-sm-2 John G. Green
+                p Senior pastor
+              .card__footer.justify-align-center
+                .card__share
+                  a.transparent.button.button--primary.button--outline.share-button(href)
+                    i.ri-facebook-line
+                .card__share
+                  a.transparent.button.button--primary.button--outline.share-button(href)
+                    i.ri-linkedin-line
+                .card__share
+                  a.transparent.button.button--primary.button--outline.share-button(href)
+                    i.ri-twitter-line
+            .card.staff
+              .card__header.no-overlay
+                img.card__image(src='/public/images/user-2.jpg', alt)
+              .card__body
+                h3.cause__tile.mar-b-sm-2 Sherika M. Diaz
+                p Women's choir leader
+              .card__footer.justify-align-center
+                .card__share
+                  a.transparent.button.button--primary.button--outline.share-button(href)
+                    i.ri-facebook-line
+                .card__share
+                  a.transparent.button.button--primary.button--outline.share-button(href)
+                    i.ri-linkedin-line
+                .card__share
+                  a.transparent.button.button--primary.button--outline.share-button(href)
+                    i.ri-twitter-line
+            .card.staff
+              .card__header.no-overlay
+                img.card__image(src='/public/images/user-4.jpg', alt)
+              .card__body
+                h3.cause__tile.mar-b-sm-2 Walter L. Barrow
+                p Pastor assistant
+              .card__footer.justify-align-center
+                .card__share
+                  a.transparent.button.button--primary.button--outline.share-button(href)
+                    i.ri-facebook-line
+                .card__share
+                  a.transparent.button.button--primary.button--outline.share-button(href)
+                    i.ri-linkedin-line
+                .card__share
+                  a.transparent.button.button--primary.button--outline.share-button(href)
+                    i.ri-twitter-line
+            .card.staff
+              .card__header.no-overlay
+                img.card__image(src='/public/images/user-3.jpg', alt)
+              .card__body
+                h3.cause__tile.mar-b-sm-2 Geoffrey E. Henderson
+                p Leading podcaster
+              .card__footer.justify-align-center
+                .card__share
+                  a.transparent.button.button--primary.button--outline.share-button(href)
+                    i.ri-facebook-line
+                .card__share
+                  a.transparent.button.button--primary.button--outline.share-button(href)
+                    i.ri-linkedin-line
+                .card__share
+                  a.transparent.button.button--primary.button--outline.share-button(href)
+                    i.ri-twitter-line
+            .card.staff
+              .card__header.no-overlay
+                img.card__image(src='/public/images/user-1.jpg', alt)
+              .card__body
+                h3.cause__tile.mar-b-sm-2 Katrina A. Compton
+                p Lead singer
+              .card__footer.justify-align-center
+                .card__share
+                  a.transparent.button.button--primary.button--outline.share-button(href)
+                    i.ri-facebook-line
+                .card__share
+                  a.transparent.button.button--primary.button--outline.share-button(href)
+                    i.ri-linkedin-line
+                .card__share
+                  a.transparent.button.button--primary.button--outline.share-button(href)
+                    i.ri-twitter-line
+            .card.staff
+              .card__header.no-overlay
+                img.card__image(src='/public/images/ministry-women-choir.jpg', alt)
+              .card__body
+                h3.cause__tile.mar-b-sm-2 Beatrice A. Compton
+                p Head of women choir ministry
+              .card__footer.justify-align-center
+                .card__share
+                  a.transparent.button.button--primary.button--outline.share-button(href)
+                    i.ri-facebook-line
+                .card__share
+                  a.transparent.button.button--primary.button--outline.share-button(href)
+                    i.ri-linkedin-line
+                .card__share
+                  a.transparent.button.button--primary.button--outline.share-button(href)
+                    i.ri-twitter-line
+      section.our-belief
+        .our-belief__content
+          .row.no-gutter
+            .flex-md-6.flex-lg-3
+              .belief.background-primary.color-off-white
+                h3.mar-b-sm-2 We believe in the Bible
+                p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam totam tempore eum alias consequuntur recusandae dolorum, tempora libero neque aliquam cum impedit dicta explicabo, magnam officiis suscipit itaque, voluptate fuga a? Molestias modi qui optio possimus, laudantium consectetur architecto ullam
+            .flex-md-6.flex-lg-3
+              .belief.background-secondary
+                h3.mar-b-sm-2 We believe in the Holy Trinity
+                p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam totam tempore eum alias consequuntur recusandae dolorum, tempora libero neque aliquam cum impedit dicta explicabo, magnam officiis suscipit itaque, voluptate fuga a? Molestias modi qui optio possimus, laudantium consectetur architecto ullam
+            .flex-md-6.flex-lg-3
+              .belief.background-body-text.color-off-white
+                h3.mar-b-sm-2 We believe in the Blessed Hope
+                p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam totam tempore eum alias consequuntur recusandae dolorum, tempora libero neque aliquam cum impedit dicta explicabo, magnam officiis suscipit itaque, voluptate fuga a? Molestias modi qui optio possimus, laudantium consectetur architecto ullam
+            .flex-md-6.flex-lg-3
+              .belief.background-primary.color-off-white
+                h3.mar-b-sm-2 We believe in the Sanctification
+                p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam totam tempore eum alias consequuntur recusandae dolorum, tempora libero neque aliquam cum impedit dicta explicabo, magnam officiis suscipit itaque, voluptate fuga a? Molestias modi qui optio possimus, laudantium consectetur architecto ullam
+      section.giving-back.combine-section.default-section-spacing
+        .container
+          .section-heading.text-center-sm
+            span.section-intro Community
+            h2 We love giving back to our community
+          .row.no-gutter.align-items-end
+            .flex-md-6.flex-lg-3
+              .card.stats
+                .card__header
+                  img.card__image(src='/public/images/gallery-3@1.5x.jpg', alt)
+                  .card__details.text-center-sm
+                    .section-intro.mar-b-sm-4 Church
+                    .stats__details.color-off-white
+                      h1.mar-b-sm-2 22
+                      h3 Open ministries
+            .flex-md-12.flex-lg-6.order
+              .card.stats.custom-height
+                .card__header
+                  img.card__image(src='/public/images/student-standing.jpg', alt)
+                  .card__details.text-center-sm
+                    .section-intro.mar-b-sm-4 Education
+                    .stats__details.color-off-white
+                      h1.mar-b-sm-2 $607K
+                      h3 Given in scholarship
+            .flex-md-6.flex-lg-3
+              .card.stats
+                .card__header
+                  img.card__image(src='/public/images/cause-1.jpg', alt)
+                  .card__details.text-center-sm
+                    .section-intro.mar-b-sm-4 Charity
+                    .stats__details.color-off-white
+                      h1.mar-b-sm-2 25K
+                      h3 Homeless feed yearly
+        .decorative-bg
+    .scroll-to-top
+      i.ri-arrow-up-line
+    #site-search.modal.modal--search.modal--overlay.text-center-sm
+      .modal__content
+        h3.mar-b-sm-2 Search our site
+        .container
+          form.form.form--search
+            .row
+              .flex-lg-9
+                .form__group
+                  input.form__input(type='text', placeholder='Search...')
+              .flex-lg-3
+                button.button--fill.button--primary.button-block-lg(type='submit') Search our site
+    footer.footer
+      .footer__upper
+        .time-location
+          .prayer-request.default-section-spacing.text-center-sm
+            .container
+              .row.justify-content-end
+                .flex-lg-8
+                  h2.mar-b-sm-2 Feeling down, distracted, lost or distanced from God and need prayers? We will pray for you!
+                  a.button.button--primary.button--fill(href='contact ') Request a prayer
+          .time-location__content
+            .container
+              .row
+                .flex-lg-4.position
+                  .box-details
+                    .section-heading
+                      span.section-intro Visit
+                      h2 Come fellowship with us
+                    .display-flex.mar-b-sm-2
+                      .left-side
+                        span.leading.bold Sunday:
+                      .right-side
+                        span.leading.mar-b-sm-06 9:00am - 10:30am (Sunday school)
+                        |  
+                        span.leading.mar-b-sm-06 11:00am - 1:30pm (Morning worship)
+                        |  
+                        span.leading 4:00pm - 5:30pm (Evening worship)
+                    .display-flex.mar-b-sm-06
+                      .left-side
+                        span.leading.bold Location:
+                      .right-side
+                        span.leading 123 Jay St, Albany, NY 12345
+                    .display-flex.mar-b-sm-06
+                      .left-side
+                        span.leading.bold Telephone:
+                      .right-side
+                        span.leading (555) 555-5555
+                    .display-flex
+                      .left-side
+                        span.leading.bold Email:
+                      .right-side
+                        span.leading example@faithinchristchurch.com
+            .time-location__map
+              iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.500392314035!2d-73.76198333429348!3d42.650750424686215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89de0a3cdc54f8b3%3A0x369f717b85d43cfc!2sMadison%20Ave%20%26%20Empire%20State%20Plaza!5e0!3m2!1sen!2sus!4v1583133727681!5m2!1sen!2sus')
+      .footer__middle.default-section-spacing
+        .container
+          .row
+            .flex-md-6.flex-lg-3
+              .footer__widget.color-off-white
+                h3 About us
+                p.mar-t-sm-2.mar-b-sm-2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat iusto distinctio inventore accusantium laborum dolorem doloremque rerum voluptatum voluptates excepturi
+                .display-flex
+                  .social
+                    a.transparent.button.button--primary.button--outline.share-button(href)
+                      i.ri-facebook-line
+                  .social
+                    a.transparent.button.button--primary.button--outline.share-button(href)
+                      i.ri-linkedin-line
+                  .social
+                    a.transparent.button.button--primary.button--outline.share-button(href)
+                      i.ri-twitter-line
+                  .social
+                    a.transparent.button.button--primary.button--outline.share-button(href)
+                      i.ri-instagram-line
+            .flex-md-6.flex-lg-3
+              .footer__widget.color-off-white
+                h3 Causes
+                ul.causes-list.mar-t-sm-2
+                  li
+                    a(href='causes-single ') Education for all children
+                  li
+                    a(href='causes-single ') No hungry neighborhood
+                  li
+                    a(href='causes-single ') No child left behind
+                  li
+                    a(href='causes-single ') Clean water & food in Syria
+                  li
+                    a(href='causes-single ') Shelters for the homeless
+                  li
+                    a(href='causes-single ') Giving hope to the depressed
+                  li
+                    a(href='causes-single ') Substance abused recovery
+            .flex-md-6.flex-lg-3.mar-t-md-2.mar-t-lg-0
+              .footer__widget.color-off-white
+                h3 Latest podcasts
+                ul.podcast-list.mar-t-sm-2
+                  li.icon-text
+                    span.icon
+                      i.ri-video-line
+                    |  
+                    span.text
+                      a(href='#') Overcoming fear through Christ
+                  li.icon-text
+                    span.icon
+                      i.ri-video-line
+                    |  
+                    span.text
+                      a(href='#') Ep.10 - Understanding forgiveness
+                  li.icon-text
+                    span.icon
+                      i.ri-video-line
+                    |  
+                    span.text
+                      a(href='#') Ep.11 - Biblical forgiveness vs wordly forgiveness
+                  li.icon-text
+                    span.icon
+                      i.ri-video-line
+                    |  
+                    span.text
+                      a(href='#') Ep.12 - Forgiveness can take time to happen
+                  li.icon-text
+                    span.icon
+                      i.ri-headphone-line
+                    |  
+                    span.text
+                      a(href='#') Understanding Jeremiah 29:11
+                  li.icon-text
+                    span.icon
+                      i.ri-headphone-line
+                    |  
+                    span.text
+                      a(href='#') Jesus is The Way, Truth, and Life
+            .flex-md-6.flex-lg-3.mar-t-md-2.mar-t-lg-0
+              .footer__widget.color-off-white
+                h3 Join our newsletter
+                .newsletter.mar-t-sm-2
+                  form.form
+                    .form__group.mar-b-sm-2
+                      input.form__input(type='email', placeholder='Enter your email address')
+                    button.button.button--primary.button--fill(type='submit') Join newsletter
+      .footer__lower.background-off-white.pad-t-sm-2.pad-b-sm-2
+        .container
+          .row
+            .flex-md-6.flex-lg-4
+              p.copyright © 2020 - Faith in Christ Church - All Rights Reserved
+            .flex-md-6.flex-lg-4.text-center-lg
+              nav.footer__nav
+                ul.display-flex.justify-content-between
+                  li
+                    a(href) Terms of Use
+                  li
+                    a(href) Privacy policy
+                  li
+                    a(href) About
+                  li
+                    a(href) Contact
+            .flex-md-12.flex-lg-4.mar-t-md-2.mar-t-lg-0.text-right-lg
+              p
+                | Template designed and developed by 
+                span.bold.underline Blazythemes
+    script(src='https://code.jquery.com/jquery-3.3.1.min.js')
+    script window.jQuery||document.write('<script src="js/jquery.min.js"><\/script>')
+    script(src='/public/js/plugins/owl.carousel.min.js')
+    script(src='dist/js/main.min.js')

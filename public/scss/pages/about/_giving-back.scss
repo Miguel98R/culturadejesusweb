@@ -1,0 +1,44 @@
+// GIVING BACK (ABOUT) ============================= //
+.giving-back {
+  padding-bottom: 10rem;
+  // Stats cards
+  .stats {
+    border: 0;
+    &:hover {
+      box-shadow: none;
+    }
+
+    .card__details {
+      top: auto;
+      bottom: $spacing-sm;
+    }
+
+    &.custom-height .card__header {
+      height: 40rem;
+    }
+  }
+
+  .order {
+    @include respond(md) {
+      order: 2;
+    }
+
+    @include respond(lg) {
+      order: 0;
+    }
+  }
+
+  .decorative-bg {
+    height: 60rem;
+    top: 80%;
+
+    @include respond(md) {
+      top: 70%;
+    }
+
+    @include respond(lg) {
+      height: 35rem;
+      top: 75%;
+    }
+  }
+}

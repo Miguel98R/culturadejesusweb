@@ -1,0 +1,247 @@
+// BUTTONS ==================================================== //
+.button,
+input[type="submit"],
+button[type="submit"] {
+  font-size: 1.6rem;
+  padding: $button-padding;
+  text-align: center;
+  border: 0;
+  display: inline-flex;
+  @include justify-align-center;
+  cursor: pointer;
+  @include border($width: 0.2rem, $color: transparent);
+  @include transition;
+
+  i {
+    margin-left: $spacing-sm;
+  }
+
+  // Primary button
+  &.button--primary {
+    color: $off-white-color;
+  }
+
+  &.button--primary.button--fill {
+    background-color: $primary-color;
+    @include boxShadow($y: 0, $color: rgba($primary-color, 0.5));
+    i {
+      color: $off-white-color;
+    }
+  }
+
+  &.button--primary.button--outline {
+    border-color: $primary-color;
+    color: $primary-color;
+    i {
+      color: $primary-color;
+    }
+  }
+
+  &.button--primary:hover,
+  &.button--primary:focus {
+    background-color: $hover-primary-color;
+    box-shadow: none;
+    color: $off-white-color;
+    i {
+      color: $off-white-color;
+    }
+    &.button--outline {
+      border-color: transparent;
+    }
+  }
+
+  // Secondary button
+  &.button--secondary {
+    color: $body-text-color;
+  }
+
+  &.button--secondary.button--fill {
+    background-color: $secondary-color;
+    @include boxShadow($y: 0, $color: rgba($secondary-color, 0.5));
+    i {
+      color: $body-text-color;
+    }
+  }
+
+  &.button--secondary.button--outline {
+    border-color: $secondary-color;
+    color: $secondary-color;
+    i {
+      color: $secondary-color;
+    }
+  }
+
+  &.button--secondary:hover,
+  &.button--secondary:focus {
+    background-color: $hover-secondary-color;
+    box-shadow: none;
+    color: $body-text-color;
+    i {
+      color: $body-text-color;
+    }
+    &.button--outline {
+      border-color: transparent;
+    }
+  }
+
+  // Ternary (off-white) button
+  &.button--off-white {
+    color: $body-text-color;
+  }
+
+  &.button--off-white.button--fill {
+    background-color: $off-white-color;
+    @include boxShadow($y: 0, $color: rgba($off-white-color, 0.5));
+    i {
+      color: $body-text-color;
+    }
+  }
+
+  &.button--off-white.button--outline {
+    border-color: $off-white-color;
+    color: $off-white-color;
+    i {
+      color: $off-white-color;
+    }
+  }
+
+  &.button--off-white:hover,
+  &.button--off-white:focus {
+    background-color: $hover-off-white-color;
+    box-shadow: none;
+    color: $body-text-color;
+    i {
+      color: $body-text-color;
+    }
+    &.button--outline {
+      border-color: transparent;
+    }
+  }
+
+  @include respond(xl) {
+    padding: 1.4rem 6rem;
+  }
+}
+
+// Share button
+.share-button {
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  padding: 0;
+  display: flex;
+  @include justify-align-center;
+
+  i {
+    margin-left: 0;
+  }
+
+  &:hover,
+  &:focus {
+    i {
+      color: $off-white-color;
+    }
+  }
+}
+
+// making button block element on various screen sizes
+.button-block-sm {
+  @include respond(sm) {
+    display: block;
+    width: 100%;
+  }
+}
+
+.button-block-md {
+  @include respond(md) {
+    display: block;
+    width: 100%;
+  }
+}
+
+.button-block-lg {
+  @include respond(lg) {
+    display: block;
+    width: 100%;
+  }
+}
+
+.button-block-xl {
+  @include respond(xl) {
+    display: block;
+    width: 100%;
+  }
+}
+
+// making button inline-block element on various screen sizes
+.button-inline-sm {
+  @include respond(sm) {
+    display: inline-block;
+    width: auto;
+  }
+}
+
+.button-inline-md {
+  @include respond(md) {
+    display: inline-block;
+    width: auto;
+  }
+}
+
+.button-inline-lg {
+  @include respond(lg) {
+    display: inline-block;
+    width: auto;
+  }
+}
+
+.button-inline-xl {
+  @include respond(xl) {
+    display: inline-block;
+    width: auto;
+  }
+}
+
+// Promotional button (can be removed)
+.button--promotion {
+  background-color: $success-color;
+  text-transform: uppercase;
+  color: $off-white-color;
+  font-size: 2rem;
+
+  &.shake {
+    animation: shake 1s infinite forwards ease-in-out;
+  }
+
+  @include respond(lg) {
+    font-size: 1.4rem;
+    padding: 1.2rem 6rem;
+  }
+
+  &:hover {
+    box-shadow: none;
+    color: $off-white-color;
+    background-color: darken($success-color, 12);
+    animation: none;
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: rotate(-2deg);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: rotate(2deg);
+  }
+}

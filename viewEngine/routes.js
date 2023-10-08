@@ -1,136 +1,186 @@
 const express = require('express')
 const router = express.Router()
 
-let url_js_files = "/public/js"
-let url_js_files_panel = "/public/js/jsPanel"
-
-
-let menu = [
+let img_link = "/public/images/cultura_img"
+let img_logos = "/public/images/logos"
+let img_lideres = "/public/images/Lideres"
+const leaders = [
     {
-        title: 'Inicio',
-        elements: [
-            {
-                icon: 'fas fa-columns',
-                title: 'Evento',
-                ref: '/eventoPanel',
-            },
-            /*{
-                icon: 'fas fa-tools',
-                title: 'Configuración',
-                ref: '/configuracion',
-            },*/
-
-
-        ]
+        name: "Ezequiel y Viky",
+        img: `${img_lideres}/Ezequiel_Viky_colaboradores_principales.jpg`,
+        ministry: "Colaboradores principales",
+        logo: `${img_logos}/cjn-min.png`,
     },
-
+    {
+        name: "Félix y Chuy",
+        img: `${img_lideres}/Félix_Chuy_colaboradores_principales.jpg`,
+        ministry: "Colaboradores principales",
+        logo: `${img_logos}/cjn-min.png`,
+    },
+    {
+        name: "Carlos y Merari",
+        img: `${img_lideres}/Carlos_Merari_colaboradores_principales.jpg`,
+        ministry: "Colaboradores principales",
+        logo: `${img_logos}/cjn-min.png`,
+    },
+    {
+        name: "Marco y Karina",
+        img: `${img_lideres}/Marco_Karina_Colaboradores_principales.jpg`,
+        ministry: "Colaboradores principales",
+        logo: `${img_logos}/cjn-min.png`,
+    },
+    {
+        name: "Aza",
+        img: `${img_lideres}/Aza_oración.jpg`,
+        ministry: "Oración",
+        logo: `${img_logos}/cjn-min.png`,
+    },
+    {
+        name: "Beto y Lili",
+        img: `${img_lideres}/Beto_Lili_matrimonios.jpg`,
+        ministry: "Matrimonios",
+        logo: `${img_logos}/matrimonios2-min.png`,
+    },
+    {
+        name: "Joel",
+        img: `${img_lideres}/Joel_alabanza.jpg`,
+        ministry: "Banda CJ",
+        logo: `${img_logos}/banda_cj_blanco_min.png`,
+    },
+    {
+        name: "Karlita y Dany",
+        img: `${img_lideres}/Karlita_Dany_Líderes de niños.jpg`,
+        ministry: "Fundadores",
+        logo: `${img_logos}/kids-min.png`,
+    },
+    {
+        name: "Uriel y Moni",
+        img: `${img_lideres}/Uriel_Moni_creativos.jpg`,
+        ministry: "Genesis Creativos",
+        logo: `${img_logos}/genesis-min.png`,
+    },
+    {
+        name: "Claudia",
+        img: `${img_lideres}/Claudia_librería.jpg`,
+        ministry: "Librería",
+        logo: `${img_logos}/cjn-min.png`,
+    },
+    {
+        name: "Felipe y Ana",
+        img: `${img_lideres}/Felipe_Ana_jóvenes12herederos.jpg`,
+        ministry: "Herederos (Jovenes +12)",
+        logo: `${img_logos}/herederos-min.png`,
+    },
+    {
+        name: "Domi y Rocio",
+        img: `${img_lideres}/Domi_Rocio_jóvenes_16clan.jpg`,
+        ministry: "Clan (Jovenes +16)",
+        logo: `${img_logos}/el_clan-min.png`,
+    },
+    {
+        name: "Cade y Evelyn",
+        img: `${img_lideres}/Cade_Evelyn_jóvenes_21atalayas.jpg`,
+        ministry: "Atalayas (Jovenes +21)",
+        logo: `${img_logos}/atalayas-min.png`,
+    },
+    {
+        name: "Orlando_Karis",
+        img: `${img_lideres}/Orlando_Karis_jóvenes26_anclas.jpg`,
+        ministry: "Anclas (Jovenes +26)",
+        logo: `${img_logos}/anclas-min.png`,
+    },
+    {
+        name: "Alejandra",
+        img: `${img_lideres}/alejandra_intencional.png`,
+        ministry: "Intencional",
+        logo: `${img_logos}/cjn-min.png`,
+    },
+    {
+        name: "Kevin",
+        img: `${img_lideres}/Kevin_Audio.jpg`,
+        ministry: "Audio",
+        logo: `${img_logos}/cjn-min.png`,
+    },
+    {
+        name: "Eber y Karen",
+        img: `${img_lideres}/Eber_karen_ADN.png`,
+        ministry: "ADN",
+        logo: `${img_logos}/cjn-min.png`,
+    },
+    {
+        name: "Eduardo y Ruth",
+        img: `${img_lideres}/Eduardo_Ruth_desayunos.jpg`,
+        ministry: "Oasis",
+        logo: `${img_logos}/cjn-min.png`,
+    },
+    {
+        name: "Magali",
+        img: `${img_lideres}/Magali_dulcería.jpg`,
+        ministry: "Dulcería",
+        logo: `${img_logos}/cjn-min.png`,
+    },
+    {
+        name: "Max y Ame",
+        img: `${img_lideres}/Max_ame_atención_pastoral.jpg`,
+        ministry: "Atención pastoral",
+        logo: `${img_logos}/cjn-min.png`,
+    },
+    {
+        name: "Víctor y Eli",
+        img: `${img_lideres}/Víctor_Eli_Staff.jpg`,
+        ministry: "Staff",
+        logo: `${img_logos}/staff_hola-min.png`,
+    },
 ]
 
-//--------------------------------------- RUTAS WEB
+router.get("/", (req, res) => {
+    res.render("index",
+        {
+            title: "Cultura de Jesús| Home",
+            img_link,
+            img_logos
+        });
+});
 
+router.get("/about", (req, res) => {
+    res.render("about");
+});
+router.get("/ministries", (req, res) => {
+    res.render("ministries-layout", {
 
-router.get("/", async (req, res) => {
-
-    res.render('index', {
-            title: 'Cultura de Jesus Oficial | Home',
-            url_js_files,
-
-
+            title: "Cultura de Jesús| Ministerios",
+            img_link,
+            img_logos,
+            img_lideres,
+            leaders
         }
-    )
-})
-
-router.get("/ddlv", async (req, res) => {
-
-    res.render('ddlv', {
-            title: 'Cultura de Jesus Oficial | DDVL 2023',
-            url_js_files,
+    );
+});
 
 
-        }
-    )
-})
+router.get("/events", (req, res) => {
+    res.render("events-layout", {
 
-router.get("/areas", async (req, res) => {
+        title: "Cultura de Jesús| Congresos",
+        img_link,
+        img_logos,
 
-    res.render('areas', {
-            title: 'Cultura de Jesus Oficial | Áreas',
-            url_js_files,
+    });
+});
+router.get("/band", (req, res) => {
+    res.render("band", {
+        title: "Cultura de Jesús| Banda CJ",
+        img_link,
+        img_logos,
 
+    });
+});
 
-        }
-    )
-})
-
-
-//---------------------------------------- RUTAS PANEL
-
-router.get("/cpanelcj", async (req, res) => {
-
-    res.render('panelControl/login', {
-            title: 'Cultura de jesus | login',
-            url_js_files,
-
-            url_js_files_panel
-
-        }
-    )
-})
-
-router.get("/panel", async (req, res) => {
-
-    res.render('panelControl/panel', {
-            title: 'Cultura de jesus | Panel',
-            menu,
-            url_js_files,
-            url_js_files_panel
-
-
-        }
-    )
-})
-
-router.get("/eventoPanel", async (req, res) => {
-
-    res.render('panelControl/evento', {
-            title: 'Cultura de jesus | Panel',
-            menu,
-            url_js_files,
-            url_js_files_panel
-
-
-        }
-    )
-})
-
-//---------------------------------------- RUTAS EVENTO
-
-router.get("/event", async (req, res) => {
-
-    res.render('event/index', {
-            title: 'Cultura de jesus | Congreso Evangelistico',
-            url_js_files
-
-        }
-    )
-})
-
-router.get("/completeRegister", async (req, res) => {
-
-    res.render('event/confirmacionRegistro', {
-            title: 'Cultura de jesus | Congreso Evangelistico',
-            url_js_files
-
-        }
-    )
-})
-
-
-router.get("/:page", async (req, res) => {
-    res.render("404", {
-        title: 'Cultura de Jesus Oficial | Home',
-        url_js_files
-    })
+router.get("/coming-soon", (req, res) => {
+    res.render("coming-soon");
+});
+router.get("/contact", (req, res) => {
+    res.render("contact");
 });
 
 

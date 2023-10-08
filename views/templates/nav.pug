@@ -1,28 +1,35 @@
-nav.navbar.navbar-expand-md.navbar-black.bg-black
-    .container.text-white
-        a.navbar-brand(href="/")
-            .div
+nav.bottom-nav
+    .container
+        .header__nav
+            .header__logo.brand--logo
+                a(href='/')
+                    img(src=`${img_logos}/cjn-min.png` ).img-fluid
+            .header__mobile--opener.hide-on-lg
 
-                img#logoNav.img-fluid.mx-3(src="/public/img/logos/cjn-min.png " style="max-height:130px;" )
-
-
-
-        button.bg-white.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#navbarCollapse", aria-controls="navbarCollapse", aria-expanded="false", aria-label="Toggle navigation")
-            span.text-black
-                i.fas.fa-bars
-        .collapse.navbar-collapse#navbarCollapse
-            ul.navbar-nav.mx-auto.mb-2.mb-md-0.my-2
-                li.nav-item.text-white
-                    a.nav-link(href="/").text-white Inicio
-                li.nav-item.text-white
-                    a.nav-link(href="/ddlv")
-                        img.img-fluid(src="/public/img/logos/ddlv_logo_blanco-min.png " style="max-height:30px;" title="Dios de los violentos 2023")
-                li.nav-item.text-white
-                    a.nav-link(href="/areas").text-white Áreas
-                //li.nav-item.text-white
-                    a.nav-link(href="/anuncios").text-white Anuncios
-                //li.nav-item.text-white
-                    a.nav-link(href="/contactanos").text-white ¿ Podemos orar por ti ?
+                button.header__mobile--icon(aria-expanded='false', aria-controls='mobile-menu', data-toggle='mobile-menu')
+                    span.line
+                    |
+                    span.line
+                    |
+                    span.line
+            ul.header__navitems.show-on-lg#mobile-menu
 
 
+                li.header__list
+                    a(href="/") Inicio
+                //li.header__list
+                    a(href='/about ') Sobre nosotros
+                li.header__list
+                    a(href="/ministries") Ministerios y áreas
+
+
+                li.header__list
+                    a(href="/events") Congresos
+                li.header__list
+                    a(href="/band") Banda CJ
+
+
+                //li.header__list
+                    a(href='/contact')
+            .header__extra.desktop-version
 

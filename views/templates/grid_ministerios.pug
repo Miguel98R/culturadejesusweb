@@ -1,0 +1,20 @@
+section.all-results.all-results--ministries.py-4
+    .container
+        .row
+            each leader in leaders
+                .flex-md-6.flex-lg-4.my-2
+                    .card.ministry
+                        .card__header
+                            img.card__image(src=leader.img, alt=leader.name)
+                            .card__details
+                                .ministry__details
+                                    .icon-text
+                                        span.icon
+                                            i.ri-group-line
+                                        |
+                                        span.text.color-off-white= leader.name
+                        .card__body
+                            h3.ministry__tile.mar-b-sm-2= leader.ministry
+                        .card__footer
+                            .card__cta.welcome__image.opac
+                                img(src=leader.logo, style="max-height: 75px;").img-fluid

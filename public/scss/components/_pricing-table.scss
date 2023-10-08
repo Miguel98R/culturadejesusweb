@@ -1,0 +1,24 @@
+// PRICING TABLE ================================ //
+.pricing {
+  padding: $spacing-sm;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__header {
+    .pricing__name {
+      font-size: $h3;
+      font-weight: $regular-weight;
+    }
+
+    .pricing__amount {
+      font-size: $h3;
+      font-weight: $bold-weight;
+    }
+  }
+
+  // will add some space around the money amount inside the button
+  .space {
+    margin: 0 $spacing-xs;
+  }
+}

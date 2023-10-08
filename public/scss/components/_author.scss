@@ -1,0 +1,21 @@
+// Author box
+.author-box {
+  &__image {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .author-social {
+    .social {
+      margin-right: $spacing-xs;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .share-button {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+}

@@ -1,35 +1,46 @@
 doctype html
 html(lang='es')
-    head
-        include templates/headerCDN
-        script.
-            $(document).ready(function () {
-                $('.header-image').hide().fadeIn(1000);
-            });
+    include templates/head
+    body.regular-homepage
+        header.header.light-text(data-onscroll-classes='fixed-header animate-header')
+            include templates/nav
+        main
+            section.hero.hero--regular.full-width.display-flex.justify-align-center
+                .hero__content.full-width.text-center-sm
+                    .container
+                        .heading.mar-b-sm-2
 
-
-        title #{title}
-
-
-
-    body.bg-black
-        include templates/nav
-        include templates/header
-        include templates/sobreNosotros
-        include templates/galeria
-        include templates/reuiniones
+                            h1.color-off-white
+                                | Bienvenido de nuevo
+                            span.section-intro.mar-b-sm-2 "Yo soy el camino, la verdad y la vida"
+                                br
+                                span.section-intro.mar-b-sm-2 Juan 14:6
 
 
 
 
+            section.welcome.text-center-sm.default-section-spacing
+                .welcome__content
+                    .container
+                        .section-heading
+                            span.section-intro Cultura de Jesús
 
+                            h2 Una cálida bienvenida por nuestra parte
+                            h5.fw-normal Somos una iglesia que se mueve en el poder y dirección del Espíritu Santo, con la visión de amar a Dios, amar al prójimo y servir al mundo, bajo los valores de amar, reflejar e influenciar, pastoreados por Héctor y Pati Andrade.
+
+
+                        .welcome__image
+                            img(src=`${img_logos}/cjn-min.png` style="max-height:150px;")
+
+            .separator.background-primary
+            include templates/ministerios_index
+
+            .combine-section
+                //include templates/pastores
+                .decorative-bg
+
+        .scroll-to-top
+            i.ri-arrow-up-line
 
         include templates/footer
-
-
-
-
-    include templates/scripts
-    script(src=url_js_files + '/common.js')
-
-    script(src=url_js_files + '/home.js')
+        include templates/scripts

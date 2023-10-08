@@ -1,0 +1,57 @@
+// TIME AND LOCATION ====================================== //
+.time-location {
+  .prayer-request {
+    background: {
+      image: linear-gradient(rgba($body-text-color, 0.7), rgba($body-text-color, 0.7)),
+        url("../../images/prayer-request-bg.jpg");
+      size: cover;
+      position: center center;
+      repeat: no-repeat;
+    }
+    color: $off-white-color;
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  .box-details {
+    // holds the service hours
+    padding: $default-padding;
+    background-color: $white-color;
+    @include boxShadow($y: 0);
+
+    .left-side {
+      margin-right: $spacing-sm;
+    }
+  }
+
+  .position {
+    // Holds the "box-details"
+    @include respond(lg) {
+      transform: translateY(-59.5%);
+      position: relative;
+      z-index: 1;
+      .box-details {
+        overflow: hidden;
+        overflow-x: auto;
+      }
+    }
+  }
+
+  &__map {
+    // Holds the map
+    width: 100%;
+    height: 100%;
+    @include respond(lg) {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+// LABEL ============================= //
+.label {
+  padding: $spacing-xs 2rem;
+  border-radius: 25rem;
+  background-color: $primary-color;
+  color: $off-white-color;
+  display: inline-block;
+
+  i {
+    color: $off-white-color;
+  }
+}

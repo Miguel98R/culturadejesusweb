@@ -1,0 +1,122 @@
+// WELCOME (HOME 1) ================================ //
+.welcome {
+  padding-bottom: 0;
+  background: {
+    image: url("../../images/smokey-bg.jpg");
+    size: cover;
+    position: center bottom;
+    repeat: no-repeat;
+  }
+
+  &__image {
+    margin-top: $spacing-sm;
+    img {
+      margin: 0 auto;
+    }
+  }
+
+  // ABOUT PAGE ================================ //
+
+  &.welcome--about {
+    // home 2
+    padding-bottom: $section-default-spacing;
+    background-image: none;
+
+    .image-box {
+      position: relative;
+
+      .box {
+        border-radius: 0.6rem;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .box--center {
+        width: 35rem;
+        margin: 0 auto;
+        animation: smooth 3s ease-in-out infinite alternate;
+        @include respond(md) {
+          width: 45rem;
+        }
+
+        @include respond(lg) {
+          width: 30rem;
+        }
+      }
+
+      .box--top-right {
+        position: absolute;
+        top: 4rem;
+        right: -2rem;
+        width: 25rem;
+        @include respond(lg) {
+          right: 0;
+        }
+      }
+
+      .box--bottom-right {
+        width: auto;
+        position: absolute;
+        bottom: -4rem;
+        right: -2rem;
+        height: 25rem;
+        z-index: -1;
+        img {
+          width: auto;
+          height: 100%;
+        }
+        @include respond(md) {
+          right: 4rem;
+        }
+        @include respond(lg) {
+          right: 6rem;
+          bottom: -4rem;
+          height: 20rem;
+        }
+      }
+
+      .box--top-left {
+        position: absolute;
+        top: -4rem;
+        left: -2rem;
+        width: 15rem;
+        @include respond(md) {
+          width: 20rem;
+        }
+
+        @include respond(lg) {
+          left: 4rem;
+        }
+      }
+
+      .box--bottom-left {
+        position: absolute;
+        bottom: 4rem;
+        left: -2rem;
+        width: 15rem;
+        @include respond(md) {
+          width: 25rem;
+        }
+
+        @include respond(lg) {
+          left: 0;
+          bottom: 4rem;
+          width: 20rem;
+        }
+      }
+    }
+  }
+}
+
+@keyframes smooth {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-1rem);
+  }
+}

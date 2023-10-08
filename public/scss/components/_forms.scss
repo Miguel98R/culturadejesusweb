@@ -1,0 +1,98 @@
+// FORMS ================================= //
+.form {
+  &__group {
+    width: 100%;
+    position: relative;
+  }
+
+  &__icon i {
+    position: absolute;
+    top: 50%;
+    right: 0.5rem;
+    transform: translateY(-50%);
+  }
+
+  &__label {
+    margin-bottom: 1rem;
+    display: inline-block;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    padding: 2rem;
+    background-color: transparent;
+    font-size: 1.6rem;
+    @include border($width: 0.2rem);
+    @include transition($property: border-color);
+
+    @include respond(xl) {
+      padding: 1.4rem 2rem;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: $hover-primary-color;
+    }
+  }
+
+  &__textarea {
+    resize: none;
+    height: 20rem;
+  }
+
+  &__radio {
+    -webkit-appearance: none;
+    position: absolute;
+  }
+
+  &__label--radio {
+    margin-bottom: 0;
+    padding: 2rem;
+    display: block;
+    background-color: $white-color;
+    text-align: center;
+    font-size: 1.6rem;
+    cursor: pointer;
+    @include boxShadow;
+    @include transition;
+    @include respond(xl) {
+      padding: 1.4rem 2rem;
+    }
+  }
+
+  &__label--custom {
+    position: absolute;
+    height: calc(100% - 0.4rem);
+    top: 0.2rem; // border width around the input element
+    left: 0.2rem; // border width around the input element
+    font-size: 2.5rem;
+    width: 4rem;
+    text-align: center;
+    background-color: $off-white-color;
+    display: flex;
+    @include justify-align-center;
+    @include border($color: $off-white-color);
+  }
+
+  &__radio:checked + .form__label--radio {
+    background-color: $hover-primary-color;
+    color: $off-white-color;
+    box-shadow: none;
+  }
+
+  // Error messages on the contact form
+  &__input.error {
+    border-color: $danger-color;
+  }
+
+  label.error {
+    color: $danger-color;
+  }
+}
+
+// Custom input for mostly donation forms
+.custom-amount,
+#custom-amount {
+  padding-left: 5rem;
+}

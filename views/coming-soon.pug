@@ -1,0 +1,46 @@
+doctype html
+html(lang='es')
+  include templates/head
+  body
+    header.header.light-text.fixed
+      nav.bottom-nav
+        .container
+          .header__nav.display-flex-column.justify-align-center.pad-t-sm-2.pad-b-sm-2
+            .header__logo.brand--logo
+              a(href='index ')
+                img(src='/public/images/brand-logo-light.png', alt='Faith in Christ Church')
+
+    main
+      section.coming-soon.banner.display-flex-column.justify-align-center.text-center-sm
+        .container
+          .banner__content
+            .section-heading
+              h1.special Coming soon
+              h1.mar-b-sm-4.mar-b-xl-6 We are currently working on something awesome and it will be available soon!
+              h2.regular-weight Please check back here soon or enter your email address and be notified once we go back online again
+            form.form.form--subscription.mar-b-sm-6.mar-b-xl-8
+              .row
+                .flex-lg-9.flex-xl-10
+                  .form__group
+                    input.form__input(type='email', placeholder='Enter your email address')
+                .flex-lg-3.flex-xl-2
+                  button.button--primary.button--fill.button-block-lg(type='submit') Notify me
+            .single-page__share
+              .display-flex.justify-align-center
+                .bold.leading.text Follow us
+                .social
+                  a.transparent.button.button--primary.button--outline.share-button(href)
+                    i.ri-facebook-line
+                .social
+                  a.transparent.button.button--primary.button--outline.share-button(href)
+                    i.ri-linkedin-line
+                .social
+                  a.transparent.button.button--primary.button--outline.share-button(href)
+                    i.ri-twitter-line
+                .social
+                  a.transparent.button.button--primary.button--outline.share-button(href)
+                    i.ri-instagram-line
+    script(src='https://code.jquery.com/jquery-3.3.1.min.js')
+    script window.jQuery||document.write('<script src="js/jquery.min.js"><\/script>')
+    script(src='/public/js/plugins/owl.carousel.min.js')
+    script(src='dist/js/main.min.js')

@@ -1,0 +1,126 @@
+@mixin transition($property: all, $duration: 0.3s, $easing-function: ease-out) {
+  transition: $property $duration $easing-function;
+}
+
+@mixin boxShadow($x: 0, $y: 0.12rem, $blur: 1.5rem, $color: rgba($black-color, 0.28)) {
+  box-shadow: $x $y $blur $color;
+}
+
+@mixin border($width: 0.1rem, $style: solid, $color: $off-white-color) {
+  border: $width $style $color;
+}
+
+@mixin justify-between {
+  justify-content: space-between;
+}
+
+@mixin justify-center {
+  justify-content: center;
+}
+
+@mixin justify-end {
+  justify-content: flex-end;
+}
+
+@mixin align-center {
+  align-items: center;
+}
+
+@mixin align-end {
+  align-items: flex-end;
+}
+
+@mixin justify-align-center {
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin triangle {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 0.56rem solid transparent;
+  border-right: 0.56rem solid transparent;
+  border-top: 0.56rem solid #c4cadb;
+  margin-left: 1.2rem;
+}
+
+@mixin customScrollbar {
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px transparent;
+    background: transparent;
+    margin: 1.1rem;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0.8rem;
+    background: transparent;
+    @include respond(sm) {
+      width: 0.6rem;
+    }
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $body-text-color;
+  }
+}
+
+@mixin customScrollbarY {
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px transparent;
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar {
+    height: 10px;
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 40px;
+    background-color: $body-text-color;
+  }
+}
+
+// GRID
+@mixin grid($number) {
+  flex: 0 0 percentage((100 / $number) / 100);
+  max-width: percentage((100 / $number) / 100);
+}
+
+// $breakpoints
+//   - (sm) phone = 0 - 552px
+//   - (md) phone-land & tablet-port = 553 - 900px
+//   - (lg) tablet-land & laptops = 901 - 1400px
+//   - (xl) large desktops (FHD...) = 1401px
+//   1em = 16px
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == sm {
+    @media screen and (min-width: $sm) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == md {
+    @media screen and (min-width: $md) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == lg {
+    @media screen and (min-width: $lg) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == xl {
+    @media screen and (min-width: $xl) {
+      @content;
+    }
+  }
+}

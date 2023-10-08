@@ -1,0 +1,55 @@
+// AVATAR ================================================ //
+.avatar {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+
+  &.avatar--small,
+  &.avatar--medium,
+  &.avatar--large {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &.avatar--small {
+    width: 5rem;
+    height: 5rem;
+
+    @include respond(lg) {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  &.avatar--medium {
+    width: 8rem;
+    height: 8rem;
+
+    @include respond(lg) {
+      width: 6rem;
+      height: 6rem;
+    }
+  }
+
+  &.avatar--large {
+    width: 12rem;
+    height: 12rem;
+
+    @include respond(lg) {
+      width: 8rem;
+      height: 8rem;
+    }
+  }
+}
+
+.avatar-name {
+  display: flex;
+  align-items: center;
+
+  .name {
+    color: $off-white-color;
+    margin-left: $spacing-xs;
+  }
+}

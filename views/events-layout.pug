@@ -1,0 +1,31 @@
+doctype html
+html(lang='es')
+    include templates/head
+    body
+        header.header.light-text(data-onscroll-classes='fixed-header animate-header')
+            include templates/nav
+        main
+            section.banner.single-banner-event.full-width
+                .container
+                    .banner__content
+                        .section-heading
+                            span.section-intro Nuestros
+                            h1 Congresos
+                        .breadcrumb
+                            .breadcrumb__home--link
+                                a(href='index ') Home
+                            span /
+                            .breadcrumb__current--page-link Congresos
+            .inner-pages-header.default-section-spacing
+                .container
+                    .section-heading.text-center-sm
+                        span.section-intro Congresos
+                        h2 Proximos congresos
+
+            include templates/grid_congresos
+
+        .scroll-to-top
+            i.ri-arrow-up-line
+
+        include templates/footer
+        include templates/scripts

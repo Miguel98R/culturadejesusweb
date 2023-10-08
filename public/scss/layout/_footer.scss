@@ -1,0 +1,29 @@
+// FOOTER =================================== //
+.footer {
+  &__middle {
+    background-color: $footer-bg-color;
+  }
+
+  &__widget {
+    a:not(.button) {
+      color: $off-white-color;
+      text-decoration: underline;
+      &:hover {
+        color: $hover-primary-color;
+      }
+    }
+
+    .social:not(:last-child) {
+      margin-right: $spacing-sm;
+    }
+  }
+
+  &__lower &__nav {
+    a {
+      color: $body-text-color;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

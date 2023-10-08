@@ -1,0 +1,80 @@
+doctype html
+html(lang='es')
+    include templates/head
+    body
+        header.header.light-text(data-onscroll-classes='fixed-header animate-header')
+            include templates/nav
+        main
+            section.banner.single-banner-band.full-width
+                .container
+                    .banner__content
+                        .section-heading
+                            span.section-intro Conoce Nuestra
+                            h1 Banda CJ
+                        .breadcrumb
+                            .breadcrumb__home--link
+                                a(href='/') Home
+                            span /
+                            .breadcrumb__current--page-link Banda CJ
+            .inner-pages-header.default-section-spacing
+                .container
+                    .section-heading.text-center-sm
+                        span.section-intro Lo último
+                        h2 En Spotify
+                        a(href="https://open.spotify.com/artist/33t7WWtGUUwISzLD2PcKPr" target="_blank")
+                            h5.p-0.m-0.text-black Ver más:
+                                span.p-0.m-0
+                                    i.text-success.fa-brands.fa-spotify.mx-2(style="font-size:20px;")
+                .container
+                    iframe(style='border-radius:12px' src='https://open.spotify.com/embed/artist/33t7WWtGUUwISzLD2PcKPr?utm_source=generator&theme=0' width='100%' height='352' frameborder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture' loading='lazy')
+
+            .inner-pages-header.default-section-spacing
+                .container
+                    .section-heading.text-center-sm
+                        span.section-intro Últimos
+                        h2 En Youtube
+                        a(href="https://www.youtube.com/@bandaculturadejesusoficial8958" target="_blank")
+                            h5.p-0.m-0.text-black Ver más:
+                                span.p-0.m-0
+                                    i.fab.fa-youtube.mx-2(style="font-size:20px;")
+
+            .container
+                .row
+                    .col-12.col-sm-6.col-md-6.col-lg-6.my-3
+                        div
+                            .card_header.text-center
+                                h5 Derrama - feat. Zoé Andrade & Cultura de Jesús Colectivo
+                            .card_body
+                                .video-responsive
+                                    iframe(width='560' height='315' src='https://www.youtube.com/embed/DFZRkB9IefM?si=spDJ3odyYQSVoYx8' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen='')
+
+                    .col-12.col-sm-6.col-md-6.col-lg-6.my-3
+                        .card
+                            .card_header.text-center
+                                h5 Cara a cara | Banda Cultura de Jesús
+                            .card_body
+                                .video-responsive
+                                    iframe(width='560' height='315' src='https://www.youtube.com/embed/OOKtb35w_wU?si=2SdItixQSuzO2z35' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen='')
+                    .col-12.col-sm-6.col-md-6.col-lg-6.my-3
+                        .card
+                            .card_header.text-center
+                                h5 Él Es - Zoe Andrade feat. Cultura de Jesús | Cultura de Jesús Colectivo
+                            .card_body
+                                .video-responsive
+                                    iframe(width='560' height='315' src='https://www.youtube.com/embed/5GUlKL-2-5o?si=N-CtozBa65NB18SB' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen='')
+
+                    .col-12.col-sm-6.col-md-6.col-lg-6.my-3
+                        .card
+                            .card_header.text-center
+                                h5 Que Se Preparen - Banda Cultura de Jesús
+                            .card_body
+                                .video-responsive
+                                    iframe(width='560' height='315' src='https://www.youtube.com/embed/mezb5Q93oaU?si=XHOYys5LYxSPAHfQ' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen='')
+
+
+        .separator.background-primary
+        .scroll-to-top
+            i.ri-arrow-up-line
+
+        include templates/footer
+        include templates/scripts

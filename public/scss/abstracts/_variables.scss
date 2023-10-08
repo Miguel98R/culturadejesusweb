@@ -1,0 +1,96 @@
+// ============================== VARIABLES ========================================== //
+
+// COLORS SCHEME ======================== //
+$primary-color: #ed6a5a;
+$secondary-color: #ead94c;
+$body-text-color: #0f202e;
+
+$hover-primary-color: #cc5242;
+$hover-secondary-color: #ccbc2d;
+$hover-off-white-color: #e9e7e7;
+
+// Form
+$focus-color: $primary-color;
+$danger-color: #842722;
+$success-color: #51a3a3;
+
+// Grays
+$dark-gray-color: #d1d1d1;
+$off-white-color: #f5f5f5;
+
+// Neutral colors
+$white-color: #ffffff;
+$black-color: #000000;
+
+// Others
+$footer-bg-color: #0a151f;
+
+// TYPOGRAPHY ======================== //
+
+// Typeface
+$body-font-family: "Roboto Condensed", sans-serif;
+
+// Font weight
+$regular-weight: 400;
+$bold-weight: 700;
+
+// Base font sizes (html) for various screen sizes
+$base-font-size-sm: 50%; // 8 / 16  ~ 8px
+$base-font-size-md: 56.25%; // 9 / 16  ~ 9px
+$base-font-size-lg: 62.5%; // 10 / 16  ~ 10px
+$base-font-size-xl: 75%; // 12 / 16  ~ 12px
+
+// Font sizes
+$h1: 5rem;
+$h2: 4rem;
+$h3: 2.8rem;
+$h4: 2.5rem;
+$h5: 2rem;
+$h6: 1.6rem;
+
+$leading-font-size: 2rem; // lg: 20px
+
+$line-height: 1.6;
+
+$letter-spacing: 0.6rem;
+
+// SPACING ======================== //
+$default-padding: 2rem; // lg: 20px
+$default-margin: 2rem; // lg: 20px
+
+$section-default-spacing: 5rem; // lg: 50px
+
+$button-padding: 2rem 6rem; // lg: 20px 60px
+$form-padding: $button-padding;
+
+$header-menu-link-padding: 2rem 1.6rem; // Individual menu item link (a tag)
+
+$spacing-xs: 0.6rem;
+$spacing-sm: 2rem;
+$spacing-md: 4rem;
+$spacing-lg: 6rem;
+$spacing-xl: 8rem;
+
+// GRID LAYOUT ======================== //
+
+// Grid variables
+$gutter-padding-horizontal: 1.5rem; // 15px
+$gutter-margin-vertical: 2rem; // 20px
+
+// Breakpoints
+$sm: 0em;
+$md: 34.5625em; // 553px / 16px
+$lg: 56.3125em; // 901px / 16px
+$xl: 87.5625em; // 1401px / 16px
+
+// Breakpoint - max-width for container
+$width-container-sm: 90%;
+$width-container-md: 85%;
+$width-container-lg: 123.3rem; // 1233px = 1233px (desired max-width) / 10px (base font size) ~ 123.3rem
+$width-container-xl: 130rem; // 1560px = 1560px (desired max-width) / 12px (base font size) ~ 130rem
+
+// STACKING ======================== //
+
+$zindex-100: 100;
+$zindex-200: 200;
+$zindex-400: 400;

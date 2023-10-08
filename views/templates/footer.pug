@@ -1,22 +1,75 @@
-footer.footer.bg-black.text-light.py-3
-    .container
+footer.footer
+    .footer__upper
+        div#reuniones.my-5.container
+            .flex-md-8.flex-lg-9
+                .section-heading.mar-b-sm-0
+                    span.section-intro Reuniones
+                    h2 Ven a la comunión con nosotros
+            .row
+                .col-6.col-md-6.justify-align-center.text-center
 
-        .row
-            .col-md-12.text-center
-                div.my-3
-                    img.img-fluid.mx-4(src="/public/img/logos/cjn-min.png" style="max-height:60px;")
-                    p &copy; Cultura de Jesus 2023
-                    a(href="https://www.facebook.com/profile.php?id=100092443712277" target="_blank").fs-4.text-white
-                                i.fab.fa-facebook.mx-2
-                    a(href="https://www.youtube.com/@CulturadeJesusOficial" target="_blank").fs-4.text-white
-                                i.fab.fa-youtube.mx-2
-                    a(href="https://www.instagram.com/culturadejesus/" target="_blank").fs-4.text-white
-                                i.fab.fa-instagram.mx-2
+                    div.py-3
+                        .row
+                            .col-1
+                            .col-10.welcome__image
+                                img( src=`${img_logos}/cjn-min.png`  style="max-height:155px;").img-fluid
+                            .col-1
+
+                    div.py-3
+                        h6 Plaza Tulipanes
+                        h6  JUEVES 8:00 PM
+
+                        a.button.button--primary.button--fill(href="https://goo.gl/maps/MerFgejvsqTwDuAWA" target="_blank"  ) Ver Mapa
 
 
-div.text-end.m-3
-    small Desarrollado por:
-        a(href="https://mikerosasdev.com" style="text-decoration:none;" target='_blank').text-dark.mx-2
-            | Jose Miguel Rosas Jimenez
+
+                .col-6.col-md-6.justify-align-center.text-center
+
+                    div.py-3
+                        .row
+                            .col-1
+                            .col-10.welcome__image
+                                img(src=`${img_logos}/cedurs-min.png` style="max-height:155px;").img-fluid
+                            .col-1
+
+                    div.py-3
+                        h6 Teatro Cedrus
+                        h6  DOMINGOS 10:00 AM | 12:00 PM
+                        a.button.button--primary.button--fill(href="https://www.google.com/maps/place/Teatro+Cedrus/@20.1106216,-98.7760856,15z/data=!4m6!3m5!1s0x85d1a09de741fd49:0xa6fa02c0ca4dfea6!8m2!3d20.1106216!4d-98.7760856!16s%2Fg%2F11bwhb6fwc" target="_blank" ) Ver Mapa
 
 
+    .footer__middle.default-section-spacing
+        .container
+            .flex-md-8.flex-lg-9
+                .section-heading.mar-b-sm-0
+                    span.section-intro Síguenos en nuestras
+                    h2.text-white Redes sociales
+
+            .row
+                .col-md-12.text-center
+                    div.my-3
+                        a(href="https://www.facebook.com/profile.php?id=100092443712277" target="_blank")
+
+                            h3
+                                i.text-white.fab.fa-facebook.mx-2
+                        a(href="https://www.youtube.com/@CulturadeJesusOficial" target="_blank")
+                            h3
+                                i.text-white.fab.fa-youtube.mx-2
+                        a(href="https://www.instagram.com/culturadejesus/" target="_blank")
+                            h3
+                                i.text-white.fab.fa-instagram.mx-2
+                        a(href="https://www.tiktok.com/@hectorcultura" target="_blank")
+                            h3
+
+                                i.text-white.fa-brands.fa-tiktok.mx-2
+
+    .footer__lower.background-off-white.pad-t-sm-2.pad-b-sm-2
+        .container
+            .row.text-center
+                .flex-md-6.flex-lg-6
+                    p.copyright © 2023 - Cultura de Jesus - All Rights Reserved
+
+                .flex-md-6.flex-lg-6
+                    p
+                        | Desarrollado por
+                        a(href="https://mikerosasdev.com" target="_blank").bold.underline.mx-2 Mike Rosas Dev

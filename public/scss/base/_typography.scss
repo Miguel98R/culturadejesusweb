@@ -1,0 +1,86 @@
+/*
+=================================================
+                  TYPOGRAPHY
+=================================================
+*/
+
+p {
+  margin-bottom: 1.6rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $body-font-family;
+  color: inherit;
+  font-weight: $bold-weight;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: $h1;
+}
+
+h2 {
+  font-size: $h2;
+}
+
+h3 {
+  font-size: $h3;
+}
+
+h4 {
+  font-size: $h4;
+}
+
+h5 {
+  font-size: $h5;
+}
+
+h6 {
+  font-size: $h6;
+}
+
+s {
+  text-decoration: line-through;
+}
+
+.leading {
+  font-size: $leading-font-size;
+}
+
+.section-intro {
+  color: $primary-color;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing;
+}
+
+.section-heading {
+  margin-bottom: $section-default-spacing - 1.5rem;
+}
+
+.blockquote {
+  padding: $default-padding;
+  padding-left: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  background-color: $off-white-color;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 4rem;
+    transform: rotate(5deg) translateX(-2rem);
+    background-color: $primary-color;
+    top: 0;
+    left: 0;
+  }
+}

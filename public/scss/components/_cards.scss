@@ -1,0 +1,77 @@
+// CARDS ======================================== //
+.card {
+  background-color: $white-color;
+  @include border;
+  @include transition;
+
+  &:hover {
+    border-color: transparent;
+    @include boxShadow($y: 0, $color: rgba($black-color, 0.5));
+  }
+
+  &__body,
+  &__footer {
+    padding: $default-padding;
+  }
+
+  &__header {
+    position: relative;
+    overflow: hidden;
+    height: 30rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba($body-text-color, 0.7);
+      z-index: 2;
+    }
+
+    &.no-overlay::before {
+      display: none;
+    }
+
+    .card__image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .card__details {
+      position: absolute;
+      top: $default-padding; // 2rem - default padding for the card body and footer
+      left: $default-padding; // 2rem - default padding for the card body and footer
+      width: 100%;
+      width: calc(100% - 4rem); // 2rem padding left and right, so 4rem in total otherwise it stretches outside the card
+      height: auto;
+      z-index: 5;
+    }
+  }
+
+  &__footer {
+    padding-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__share {
+    margin-right: $spacing-sm;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.icon-text {
+  display: flex;
+  align-items: center;
+  .icon {
+    margin-right: $spacing-xs;
+  }
+}

@@ -1,0 +1,92 @@
+// BANNER ===================================== //
+.banner {
+  background: {
+    image: linear-gradient(rgba($body-text-color, 0.7), rgba($body-text-color, 0.7)), url("../../images/banner.jpg");
+    position: left;
+    size: cover;
+    repeat: no-repeat;
+  }
+
+  height: 40rem;
+  margin-top: -8rem;
+  padding: 15rem 0 10rem;
+  color: $off-white-color;
+
+  .section-heading {
+    margin-bottom: 2.5rem;
+  }
+
+  &.single-banner-media {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10rem 0;
+    height: 50rem;
+  }
+}
+
+// SINGLE MINISTRY
+.single-banner-minitries {
+  background-image: linear-gradient(rgba($body-text-color, 0.7), rgba($body-text-color, 0.7)),
+    url("../../images/ministry-single.jpg");
+}
+
+// SINGLE SERMONS
+.single-banner-sermon {
+  background-image: linear-gradient(rgba($body-text-color, 0.7), rgba($body-text-color, 0.7)),
+    url("../../images/sermon-single.jpg");
+  background-position: right;
+}
+
+// SINGLE EVENTS
+.single-banner-event {
+  background-image: linear-gradient(rgba($body-text-color, 0.7), rgba($body-text-color, 0.7)),
+    url("../../images/event-single.jpg");
+  background-position: right;
+}
+
+// SINGLE CAUSES
+.single-banner-causes {
+  background-image: linear-gradient(rgba($body-text-color, 0.7), rgba($body-text-color, 0.7)),
+    url("../../images/causes-single.jpg");
+  background-position: right;
+}
+
+// SINGLE BLOG
+.single-banner-blog {
+  background-image: linear-gradient(rgba($body-text-color, 0.7), rgba($body-text-color, 0.7)),
+    url("../../images/blog-single.jpg");
+  background-position: right;
+}
+
+// THANK YOU (DONATIONS)
+.banner--thankyou {
+  background-image: linear-gradient(rgba($body-text-color, 0.7), rgba($body-text-color, 0.7)),
+    url("../../images/thank-you-donation-bg.jpg");
+  background-position: left;
+}
+
+// COMING SOON
+.coming-soon {
+  background-image: linear-gradient(rgba($body-text-color, 0.7), rgba($body-text-color, 0.7)),
+    url("../../images/lady-looking-up-bg.jpg");
+  background-position: right;
+  height: auto;
+}
+
+.coming-soon {
+  background-repeat: no-repeat;
+  width: 100%;
+
+  padding-top: 20rem;
+  height: auto;
+
+  @include respond(md) {
+    height: calc(100vh + 8rem); // the 8rem comes from the (-8rem margin-top) that is applied to the banner as default
+    padding-top: 15rem;
+  }
+
+  @include respond(lg) {
+    padding-top: 20rem;
+  }
+}

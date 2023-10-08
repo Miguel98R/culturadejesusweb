@@ -1,0 +1,10 @@
+// PODCAST CTA ===================================== //
+.podcast-cta {
+  background: {
+    image: linear-gradient(to right, rgba($primary-color, 0.4) 44%, rgba($primary-color, 0.9)),
+      url("../../images/podcast-cta-bg.jpg");
+    size: cover;
+    position: center center;
+    repeat: no-repeat;
+  }
+}

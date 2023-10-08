@@ -1,0 +1,38 @@
+// ALL SINGLE PAGES ============================ //
+.single-full-text .image-block {
+  img {
+    width: 100%;
+    height: 20rem;
+    max-height: 100%;
+  }
+}
+
+.single-page__share {
+  .text {
+    margin-right: $spacing-sm;
+  }
+  .social {
+    margin-right: $spacing-xs;
+  }
+}
+
+// Single page navigation
+.single-page__navigation {
+  .previous .arrow {
+    margin-right: $spacing-sm;
+  }
+  .next .arrow {
+    margin-left: $spacing-sm;
+  }
+}
+
+// MEDIAS (VIDEOS AND AUDIOS)
+.single-media {
+  margin-top: -18rem;
+
+  &.single-media-audio {
+    @include respond(lg) {
+      margin-top: -9rem;
+    }
+  }
+}

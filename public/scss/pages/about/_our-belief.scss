@@ -1,0 +1,10 @@
+// OUR BELIEF (ABOUT US PAGE) ================================ //
+.our-belief {
+  // boxes
+  .belief {
+    padding: $spacing-sm;
+    @include respond(xl) {
+      padding: $spacing-xl;
+    }
+  }
+}

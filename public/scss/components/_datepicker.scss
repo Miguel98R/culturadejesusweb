@@ -1,0 +1,113 @@
+// CUSTOMISATION OF JQUERY DATEPICKER ========================== //
+// Actual picker
+.ui-datepicker {
+  max-width: 100%;
+  width: auto;
+  padding: 1.2rem;
+  padding-top: 0;
+}
+
+.ui-widget.ui-widget-content {
+  border: 0;
+  @include boxShadow($y: 0);
+}
+
+.ui-widget-header {
+  border: 0;
+  color: $body-text-color;
+  font-weight: $regular-weight;
+  background-color: transparent;
+}
+
+.ui-datepicker .ui-datepicker-header {
+  padding: 1.2rem 0;
+  margin-bottom: 1rem;
+  border-bottom: 0.1rem solid $off-white-color;
+}
+
+// Next and Prev arrows positioning
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: transparent;
+
+  &:hover {
+    &::before {
+      border-color: $hover-primary-color;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 40%;
+    border-top: 0.2rem solid $body-text-color;
+    border-left: 0.2rem solid $body-text-color;
+
+    @include transition(border-color);
+  }
+}
+
+.ui-datepicker .ui-datepicker-prev {
+  left: $spacing-xs;
+
+  &::before {
+    left: 40%;
+    transform: translate(0, -50%) rotate(-45deg);
+  }
+}
+
+.ui-datepicker .ui-datepicker-next {
+  right: $spacing-xs;
+  &::before {
+    right: 40%;
+    transform: translate(0, -50%) rotate(125deg);
+  }
+}
+
+// Removes all rounded corners
+.ui-corner-all {
+  border-radius: 0;
+}
+
+.ui-widget-content {
+  color: $body-text-color;
+}
+
+.ui-widget {
+  font-family: inherit;
+  // Holds the day number
+  .ui-state-default {
+    border: 0;
+    background-color: transparent;
+    color: $body-text-color;
+    font-size: 1.4rem;
+    padding: $spacing-xs;
+
+    &:hover {
+      color: $hover-primary-color;
+    }
+  }
+}
+
+// Holds today's date
+.ui-widget-content .ui-state-highlight {
+  color: $hover-primary-color;
+  font-weight: $bold-weight;
+  border: 0.1rem solid $hover-primary-color;
+}
+
+// Holds the days of the week
+.ui-datepicker th {
+  padding: $spacing-xs 1.2rem;
+  font-weight: $bold-weight;
+}
