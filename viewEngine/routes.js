@@ -57,7 +57,7 @@ const leaders = [
         name: "Uriel y Moni",
         img: `${img_lideres}/Uriel_Moni_creativos.jpg`,
         ministry: "Genesis Creativos",
-        logo: `${img_logos}/genesis-min.png`,
+        logo: `${img_logos}/genesis_1.png`,
     },
     {
         name: "Claudia",
