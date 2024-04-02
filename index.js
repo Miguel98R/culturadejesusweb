@@ -25,6 +25,17 @@ app.use(morgan('dev'))
 
 app.use('/public', express.static(path.join(__dirname, 'public')))
 
+app.get(/robots\.txt$/, function (req, res) {
+    const urlHost = req.protocol + '://' + req.get('host');
+    res.type('text/plain');
+    res.send(`
+        User-agent: *
+        Disallow: /cpanel/
+        Disallow: /login_catas/
+        Sitemap: ${urlHost}/sitemap.xml
+    `);
+});
+
 //rutas
 app.use(require('./viewEngine/routes'))
 app.use('/api', require('./routes/_api'))

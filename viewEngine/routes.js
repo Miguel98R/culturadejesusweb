@@ -1,4 +1,5 @@
 const express = require('express')
+const path = require("path");
 const router = express.Router()
 
 let img_link = "/public/images/cultura_img"
@@ -176,6 +177,23 @@ router.get("/band", (req, res) => {
     });
 });
 
+const viewXMLmap = async (req, res) => {
+    try {
+        // Ruta al archivo XML existente
+        const filePath = path.join(__dirname, '../sitemap.xml');
+
+        // Enviar el XML como respuesta
+        res.set('Content-Type', 'application/xml');
+        res.status(200).sendFile(filePath);
+    } catch (error) {
+        console.error('Error al enviar el sitemap XML:', error);
+        res.status(500).json({error: 'Error al enviar el sitemap XML'});
+    }
+};
+
+
+router.get('/sitemap.xml', viewXMLmap)
+
 router.get("/:page", async (req, res) => {
     res.render("coming-soon",{
         title: "Cultura de Jesús| 404",
@@ -190,6 +208,7 @@ router.get("/contact", (req, res) => {
         img_logos,
     });
 });
+
 
 
 module.exports = router
