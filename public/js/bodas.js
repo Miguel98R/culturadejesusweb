@@ -14,7 +14,16 @@ const clear = async () => {
     // Limpiar campo select
     $('#tieneHijos').prop('selectedIndex', 0); // Pone el select en la primera opción
 };
+
+const validarCelular = (celular) => {
+    const regex = /^[0-9]{10}$/; // Expresión regular para validar 10 dígitos numéricos
+    return regex.test(celular);
+};
+
 $(async function () {
+    // Limpiar campos al iniciar
+    clear();
+
     $('#bodasBtn').click(function () {
         clear();
         $('#saveRegistro').attr('data-tipo', 'boda'); // Asignar tipo 'boda' al botón de guardar
@@ -46,6 +55,16 @@ $(async function () {
             celular: $('#celularNoviaEsposa').val()
         };
 
+        // Validar números de celular
+        if (!validarCelular(novioEsposo.celular) || !validarCelular(noviaEsposa.celular)) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Por favor ingresa un número de celular válido con 10 dígitos.'
+            });
+            return; // Detener la función si el número no es válido
+        }
+
         const tienenHijos = $('#tieneHijos').val();
         const cantidadHijos = $('#cantidadHijos').val();
 
@@ -67,11 +86,19 @@ $(async function () {
                 data: JSON.stringify(data)
             });
 
-            alert(response.message); // Muestra mensaje de éxito
+            Swal.fire({
+                icon: 'success',
+                title: 'Éxito',
+                text: response.message
+            });
             clear(); // Limpia los campos después de enviar los datos
             $('#registroBodasModal').modal('hide'); // Cierra la modal
         } catch (error) {
-            alert(error.responseJSON.error); // Muestra mensaje de error
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: error.responseJSON.error
+            });
         }
     });
 
@@ -99,12 +126,32 @@ $(async function () {
                 data: JSON.stringify(data)
             });
 
-            alert(response.message); // Muestra mensaje de éxito
+            Swal.fire({
+                icon: 'success',
+                title: 'Éxito',
+                text: response.message
+            });
             clear(); // Limpia los campos después de enviar los datos
             $('#invitadosModal').modal('hide'); // Cierra la modal
         } catch (error) {
-            alert(error.responseJSON.error); // Muestra mensaje de error
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: error.responseJSON.error
+            });
         }
     });
 
-})
+    // Configurar los inputs de celular para aceptar solo números y tener una longitud máxima de 10
+    $('#celularNovioEsposo, #celularNoviaEsposa').on('input', function () {
+        const maxLength = 10;
+        const value = $(this).val();
+
+        // Eliminar caracteres no numéricos
+        const newValue = value.replace(/\D/g, '').substring(0, maxLength);
+
+        // Actualizar el valor del input
+        $(this).val(newValue);
+    });
+
+});
