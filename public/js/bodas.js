@@ -113,6 +113,16 @@ $(async function () {
             $('#nombre5').val()
         ].filter(nombre => nombre.trim() !== ''); // Filtrar nombres vacíos
 
+        // Validar que al menos se haya registrado un invitado
+        if (invitados.length === 0) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Por favor, registra al menos un invitado.'
+            });
+            return; // Detener la función si no hay invitados registrados
+        }
+
         const data = {
             tipo, // Agregar el tipo de evento al objeto de datos
             invitados
@@ -141,6 +151,7 @@ $(async function () {
             });
         }
     });
+
 
     // Configurar los inputs de celular para aceptar solo números y tener una longitud máxima de 10
     $('#celularNovioEsposo, #celularNoviaEsposa').on('input', function () {
