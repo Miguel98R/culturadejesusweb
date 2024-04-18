@@ -8,7 +8,6 @@ const db = require('./db')
 const app = express()
 
 //configuraciones
-
 app.set('port',process.env.PORT || 3005 )
 app.set('appName',process.env.APP_NAME)
 

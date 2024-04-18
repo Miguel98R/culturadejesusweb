@@ -2,6 +2,7 @@ let invitadosModel = require('../models/invitados.model'); // Importar el modelo
 
 let ms = require('../helpers/apiato.helper');
 
+
 // Validaciones para los datos
 let validationObject = {
     nombre: { type: 'string', required: true }

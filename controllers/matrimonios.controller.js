@@ -1,7 +1,6 @@
 let ms = require('../helpers/apiato.helper')
 let matrimoniosModel = require('../models/matrimonios.model')
 
-
 // Add here validations for push data
 let validationObject = {}
 // Add here Population system

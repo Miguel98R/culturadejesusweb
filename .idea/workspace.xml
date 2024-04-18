@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="edd9fcca-f607-4a9b-bdb6-32cd2df86c95" name="Changes" comment="" />
+    <list default="true" id="edd9fcca-f607-4a9b-bdb6-32cd2df86c95" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/invitados.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/invitados.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/matrimonios.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/matrimonios.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,15 +31,30 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/mike/Escritorio/MikeDev/culturadejesusweb",
+    "last_opened_file_path": "/home/mike/Escritorio/MikeDev/culturadejesusweb/package.json",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v20.10.0/bin/node" />
+      <envs />
+      <method v="2">
+        <option name="LaunchBrowser.Before.Run" url="http://localhost:3001" />
+      </method>
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -52,6 +72,7 @@
       <updated>1713424302596</updated>
       <workItem from="1713424305679" duration="604000" />
       <workItem from="1713425898919" duration="172000" />
+      <workItem from="1713427205375" duration="230000" />
     </task>
     <servers />
   </component>
