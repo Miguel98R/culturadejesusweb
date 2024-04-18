@@ -1,0 +1,40 @@
+#invitadosModal.modal.fade(tabindex='-1', role='dialog')
+
+    .modal-dialog.modal-lg
+        .modal-content
+            .modal-header
+                h5.modal-title Registro Invitados
+                button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+            .modal-body
+                    label.fw-bold.form-label Nota: Niños poner edad junto al nombre
+                    p Ej. Marco Cruz 2 años
+                    // Nombre 1
+                    .mb-3
+                        label.form-label(for="nombre1") Nombre
+                        input#nombre1.form-control(type="text" placeholder="Nombre")
+
+                    // Nombre 2
+                    .mb-3
+                        label.form-label(for="nombre2") Nombre
+                        input#nombre2.form-control(type="text" placeholder="Nombre")
+
+                    // Nombre 3
+                    .mb-3
+                        label.form-label(for="nombre3") Nombre
+                        input#nombre3.form-control(type="text" placeholder="Nombre")
+
+                    // Nombre 4
+                    .mb-3
+                        label.form-label(for="nombre4") Nombre
+                        input#nombre4.form-control(type="text" placeholder="Nombre")
+
+                    // Nombre 5
+                    .mb-3
+                        label.form-label(for="nombre5") Nombre
+                        input#nombre5.form-control(type="text" placeholder="Nombre")
+
+
+
+            .modal-footer
+                button.btn.btn-secondary(type="button" data-bs-dismiss="modal") Cerrar
+                button#saveInvitados.btn.btn-primary(type="button") Guardar

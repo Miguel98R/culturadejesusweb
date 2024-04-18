@@ -176,6 +176,14 @@ router.get("/band", (req, res) => {
 
     });
 });
+router.get("/bodas", (req, res) => {
+    res.render("bodas", {
+        title: "Cultura de Jesús| Matrimonios",
+        img_link,
+        img_logos,
+
+    });
+});
 
 const viewXMLmap = async (req, res) => {
     try {

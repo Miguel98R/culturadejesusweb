@@ -1,0 +1,76 @@
+#registroBodasModal.modal.fade(tabindex='-1', role='dialog')
+
+    .modal-dialog.modal-xl
+        .modal-content
+            .modal-header
+                h5.modal-title Registro
+                button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+            .modal-body
+
+                .row
+                    .col-12.col-md-6
+                        div.my-2
+                            img.w-100(src="/public/images/pantalla_matrimonios.jpg", style="max-height:580px;", class="img-fluid")
+
+                    .col-12.col-md-6
+                        .row
+                            .col-6
+                                .mb-3
+                                    label.form-label(for="novioEsposo") Novio o Esposo
+                                    hr
+
+                                .mb-3
+                                    label.form-label(for="nombreNovioEsposo") Nombre
+                                    input#nombreNovioEsposo.form-control(type="text" placeholder="Nombre")
+
+                                .mb-3
+                                    label.form-label(for="apellidosNovioEsposo") Apellidos
+                                    input#apellidosNovioEsposo.form-control(type="text" placeholder="Apellidos")
+
+                                .mb-3
+                                    label.form-label(for="edadNovioEsposo") Edad
+                                    input#edadNovioEsposo.form-control(type="number" placeholder="Edad")
+
+                                .mb-3
+                                    label.form-label(for="celularNovioEsposo") Celular
+                                    input#celularNovioEsposo.form-control(type="tel" placeholder="Celular")
+
+
+                            .col-6
+                                .mb-3
+                                    label.form-label(for="noviaEsposa") Novia o Esposa
+                                    hr
+
+                                .mb-3
+                                    label.form-label(for="nombreNoviaEsposa") Nombre
+                                    input#nombreNoviaEsposa.form-control(type="text" placeholder="Nombre")
+
+                                .mb-3
+                                    label.form-label(for="apellidosNoviaEsposa") Apellidos
+                                    input#apellidosNoviaEsposa.form-control(type="text" placeholder="Apellidos")
+
+                                .mb-3
+                                    label.form-label(for="edadNoviaEsposa") Edad
+                                    input#edadNoviaEsposa.form-control(type="number" placeholder="Edad")
+
+                                .mb-3
+                                    label.form-label(for="celularNoviaEsposa") Celular
+                                    input#celularNoviaEsposa.form-control(type="tel" placeholder="Celular")
+
+                        .row
+                            .col-6
+                                .mb-3
+                                    label.form-label(for="tieneHijos") Tienen hijos?
+                                    select#tieneHijos.form-select
+                                        option(value="no") No
+                                        option(value="si") Sí
+
+                            .col-6
+                                .mb-3
+                                    label.form-label(for="cantidadHijos") Cuántos hijos tienen?
+                                    input#cantidadHijos.form-control(type="number" min=0 placeholder="Cantidad de hijos")
+
+
+            .modal-footer
+                button.btn.btn-secondary(type="button" data-bs-dismiss="modal") Cerrar
+                button.btn.btn-primary#saveRegistro(type="button") Registrar

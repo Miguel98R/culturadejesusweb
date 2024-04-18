@@ -1,0 +1,57 @@
+
+body {
+    background-color: #F0F0E0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    scrollbar-width: thin; /* Ancho del scroll */
+    scrollbar-color: #888 #f1f1f1; /* Color del scroll y del track */
+}
+/* Estilos adicionales para navegadores basados en WebKit (como Chrome y Safari) */
+body::-webkit-scrollbar {
+    width: 1px; /* Ancho del scroll */
+}
+
+body::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color de fondo del track */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color del scroll */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Color del scroll al pasar el mouse */
+}
+
+
+
+
+main {
+    flex: 1;
+}
+
+.footer {
+    width: 100%;
+}
+
+.btn-custom {
+    font-family: 'Insight Melody', sans-serif; /* Tipografía */
+    font-size: 1.6rem;  /* Tamaño de fuente */
+    padding: 2rem 1rem; /* Padding vertical y horizontal */
+    background-color: #023E66; /* Color de fondo */
+    color: white; /* Color de texto */
+    border-radius: 10px; /* Bordes redondeados */
+    border: none; /* Quita el borde */
+}
+
+.btn-custom:hover {
+    background-color: white; /* Color de fondo al pasar el mouse */
+    color: #023E66; /* Color de fondo */
+
+}
+
+.font-weight-light {
+    font-weight: 300; /* Este valor puede variar dependiendo de la tipografía que estés usando */
+}
