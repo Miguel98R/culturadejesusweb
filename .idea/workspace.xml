@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="edd9fcca-f607-4a9b-bdb6-32cd2df86c95" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/public/images/banner_matrimonios2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/pantalla_matrimonios2.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/bodas.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/bodas.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/modals/bodaModal.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/modals/bodaModal.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/templates/grid_congresos.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/templates/grid_congresos.pug" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +19,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "mikeleganux1998"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Miguel98R/culturadejesusweb.git",
+    "accountId": "bbebd52e-c529-49e6-b19f-9106d5a21196"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -25,20 +40,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/mike/Escritorio/MikeDev/culturadejesusweb/package.json&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/mike/Escritorio/MikeDev/culturadejesusweb/public/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/images" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -74,7 +94,10 @@
       <workItem from="1713449685786" duration="74000" />
       <workItem from="1713449808481" duration="1523000" />
       <workItem from="1713451358081" duration="430000" />
-      <workItem from="1713451907936" duration="421000" />
+      <workItem from="1713451907936" duration="474000" />
+      <workItem from="1713677149256" duration="799000" />
+      <workItem from="1713753384528" duration="19000" />
+      <workItem from="1713935286201" duration="381000" />
     </task>
     <servers />
   </component>
