@@ -185,6 +185,15 @@ router.get("/bodas", (req, res) => {
     });
 });
 
+router.get("/ddlv", (req, res) => {
+    res.render("ddlv", {
+        title: "Cultura de Jesús| DDLV 2024",
+        img_link,
+        img_logos,
+
+    });
+});
+
 const viewXMLmap = async (req, res) => {
     try {
         // Ruta al archivo XML existente

@@ -7326,6 +7326,13 @@ body .ui-tooltip {
     background-repeat: no-repeat;
 }
 
+.hero.hero--ddlv {
+    background-image: linear-gradient(rgba(15, 32, 46, 0.7), rgba(15, 32, 46, 0.7)), url("../images/ddlv/portada_ddlv.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .upcoming-intro {
     padding: 2rem;
     height: 100%;
