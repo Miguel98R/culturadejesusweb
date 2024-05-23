@@ -1,0 +1,109 @@
+doctype html
+html(lang='es')
+    include templates/head
+    style.
+        .display-flex {
+            display: flex;
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; /* Centra verticalmente */
+        }
+
+        .btn-rojo {
+            background-color: red;
+            color: black; /* Cambia el color del texto a blanco para que se destaque sobre el fondo rojo */
+            /* Aquí puedes agregar otros estilos según sea necesario */
+        }
+
+
+    body.regular-homepage(style="background:#000")
+        header.header.light-text(data-onscroll-classes='fixed-header animate-header')
+            include templates/nav
+        main
+            // Contenedor para centrar la imagen
+            .container.text-center
+
+                .welcome__image
+                    img.img-fluid(src="/public/images/ddlv/logo_ddlv.png" style="max-width:100%;")
+
+            // Sección con el video
+            .container.text-center
+                section.py-3.text-center-lg.text-white
+                    .row
+                        .col-12.col-md-1
+                        .col-12.col-md-10
+                            video#trailer(controls autoplay muted width="100%" height="580" src="/public/images/ddlv/trailer_ddlv.mp4")
+                                p Tu navegador no soporta el elemento de video.
+                    .col-12.col-md-1
+
+            .container.text-center
+                section.py-3.text-center-lg.text-white
+                    .row
+                        .col-12.col-md-12
+                            h2.display-3 Oradores
+                            video#ordaores(controls autoplay muted width="100%" height="550" src="/public/images/ddlv/Oradores.mp4")
+                                p Tu navegador no soporta el elemento de video.
+            .container.text-center
+                section.py-3.text-center-lg.text-white
+                    h2.display-3 Boletos
+                .row
+                    .col-12.col-md-1
+                    .col-12.col-md-10
+                        .welcome__image
+                            img.img-fluid(src="/public/images/ddlv/post_ddlv24.jpg" style="max-height:640px;")
+                    .col-12.col-md-1
+                div.text-center.display-flex
+                    a.text-center.button.btn-custom.btn-rojo(href='https://www.eventbrite.com.mx/e/ddlv24-tickets-849391080587?aff=ebdsshios' target="_blank") Adquiere tus boletos
+
+            .container.py-3.text-center
+                section.py-3.text-center-lg.text-white
+                    h2.display-3 Ubicación
+                    h2.display-6 Centro de Estudios Teológicos y Ministeriales, Camino Venado a Téllez km. 1 s/n, 42186 Pachuca de Soto, Hgo.
+                    .welcome__image
+
+                        div
+                            iframe(src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14992.539413840756!2d-98.7678048!3d20.0447935!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1a139980658f7%3A0x98d5d547e91909be!2sCentro%20de%20Estudios%20Teol%C3%B3gicos%20y%20Ministeriales!5e0!3m2!1ses-419!2smx!4v1716432363641!5m2!1ses-419!2smx' width='1000' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade')
+
+
+
+
+
+
+            section.welcome.text-center-sm.default-section-spacing
+                .welcome__content
+                    .container
+                        .section-heading
+        .footer__middle.default-section-spacing
+            .container
+                .flex-md-8.flex-lg-9
+                    .section-heading.mar-b-sm-0
+                        span.section-intro Síguenos en nuestras
+                        h2.text-white Redes sociales
+                .row
+                    .col-md-12.text-center
+                        div.my-3
+                            a(href="https://www.facebook.com/profile.php?id=100092443712277" target="_blank")
+                                h3
+                                    i.text-white.fab.fa-facebook.mx-2
+                            a(href="https://www.youtube.com/@CulturadeJesusOficial" target="_blank")
+                                h3
+                                    i.text-white.fab.fa-youtube.mx-2
+                            a(href="https://www.instagram.com/culturadejesus/" target="_blank")
+                                h3
+                                    i.text-white.fab.fa-instagram.mx-2
+                            a(href="https://www.tiktok.com/@hectorcultura" target="_blank")
+                                h3
+                                    i.text-white.fa-brands.fa-tiktok.mx-2
+        .footer__lower.background-off-white.pad-t-sm-2.pad-b-sm-2
+            .container
+                .row.text-center
+                    .flex-md-6.flex-lg-6
+                        p.copyright © 2024 - Cultura de Jesus - All Rights Reserved
+                    .flex-md-6.flex-lg-6
+                        p
+                            | Desarrollado por
+                            a(href="https://mikerosasdev.com" target="_blank").bold.underline.mx-2 Mike Rosas Dev
+        include templates/scripts
+
+        // Script para reproducir automáticamente el video al hacer scroll
+
+
