@@ -1,0 +1,49 @@
+doctype html
+html(lang='es')
+    include templates/head
+
+    body.regular-homepage(style="background:#000")
+        header.header.light-text(data-onscroll-classes='fixed-header animate-header')
+            include templates/nav
+        main
+            .container
+                div.text-center
+                    h1.display-1.text-white Venta de predicas
+
+
+            .container.py-5
+
+                div.welcome__image.m-0.p-0
+                    img(src="/public/images/logos/logo_pre_DDLV.png" style="max-height:400px;")
+                div.text-center-lg
+                    h3.text-white Predicas
+
+                .row.text-center#pre_ddlv_2024
+
+                div.welcome__image.m-0.p-0
+                    img(src="/public/images/ddlv/logo_ddlv.png" style="max-height:150px;")
+                div.text-center-lg
+                    h3.text-white Predicas
+                .row.text-center#ddlv_2024
+
+                div.welcome__image.m-0.p-0
+                    img(src="/public/images/logos/logo_pos.png" style="max-height:350px;")
+                div.text-center-lg
+                    h3.text-white Predicas
+                    .row.text-center#pos_ddlv_2024
+
+        .footer__lower.background-off-white.pad-t-sm-2.pad-b-sm-2
+            .container
+                .row.text-center
+                    .flex-md-6.flex-lg-6
+                        p.copyright © 2024 - Cultura de Jesus - All Rights Reserved
+                    .flex-md-6.flex-lg-6
+                        p
+                            | Desarrollado por
+                            a(href="https://mikerosasdev.com" target="_blank").bold.underline.mx-2 Mike Rosas Dev
+        include templates/scripts
+        script(src="/public/js/ddlv_predicas.js")
+
+        // Script para reproducir automáticamente el video al hacer scroll
+
+

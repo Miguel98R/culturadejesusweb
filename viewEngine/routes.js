@@ -176,18 +176,21 @@ router.get("/band", (req, res) => {
 
     });
 });
-router.get("/bodas", (req, res) => {
-    res.render("bodas", {
-        title: "Cultura de Jesús| Matrimonios",
+
+
+router.get("/ddlv", (req, res) => {
+    res.render("ddlv", {
+        title: "Cultura de Jesús| DDLV 2024",
         img_link,
         img_logos,
 
     });
 });
 
-router.get("/ddlv", (req, res) => {
-    res.render("ddlv", {
-        title: "Cultura de Jesús| DDLV 2024",
+
+router.get("/predicas_ddlv", (req, res) => {
+    res.render("ddlv_predicas", {
+        title: "Cultura de Jesús| Predicas - DDLV 2024",
         img_link,
         img_logos,
 
@@ -213,13 +216,6 @@ router.get('/sitemap.xml', viewXMLmap)
 
 router.get("/:page", async (req, res) => {
     res.render("coming-soon",{
-        title: "Cultura de Jesús| 404",
-        img_link,
-        img_logos,
-    });
-});
-router.get("/contact", (req, res) => {
-    res.render("contact",{
         title: "Cultura de Jesús| 404",
         img_link,
         img_logos,
