@@ -1,0 +1,56 @@
+doctype html
+html(lang='es')
+    head
+        include templates/head
+        include templates/styles
+    body
+        main
+            .page-wrapper#main-wrapper(data-layout='vertical', data-navbarbg='skin6', data-sidebartype='full', data-sidebar-position='fixed', data-header-position='fixed')
+                aside.left-sidebar
+                    include templates/menu
+                .body-wrapper
+                    header.app-header
+                        include templates/nav
+
+                    .container-fluid
+                        .row
+                            .col-lg-12.d-flex.align-items-strech
+
+
+                                .card.w-100
+                                    .row#months
+
+
+
+        div.col-12.col-md-6(style="display:none;")#template_month_
+            .card(style="border-radius:9px;").m-3.bg-transparent
+                .card-body(style="border-radius:9px;height:380px;")
+                    div
+                        h2#name_month_
+                        .form-group
+                            label Visible:
+                            input.mx-2#active_month_(type="checkbox").active_month
+                    div(style="max-height: 235px; overflow-y: auto;")
+                        .row.my-3#events_
+                .card-footer.text-center
+
+                    button#add_events_.btn.btn-success.btn-sm Agregar fecha
+
+        div.col-12(style="display:none")#template_event_.my-2
+            .row
+                .col-3.text-center
+                    p.fw-bolder#date_event_
+                .col-6.text-center
+                    p#location_event_
+                .col-3.text-center
+                    button.btn.btn-danger#delete_event_.delete_event
+                        i.bi.bi-trash
+
+
+
+        include modals/add_eventModal
+        include modals/editEventModal
+
+        include templates/scripts
+        script(src=url_js_files + '/common.js?v=' + Math.random())
+        script(src=url_js_files + '/agenda.js?v=' + Math.random())

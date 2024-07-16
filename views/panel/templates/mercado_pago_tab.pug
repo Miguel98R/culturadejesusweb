@@ -1,0 +1,42 @@
+#pago_mercado_pago_tab.tabsLi.tab-pane.fade(role='tabpanel' aria-labelledby='PagoMercadoP').my-4
+
+    h4.my-2 Production
+    div
+        .row.my-2
+
+            .col-12.col-lg-4
+                .form-group
+                    label(for='webhook_secret_mp') Webhook secret Code:
+                    input.form-control.updateConf#webhook_secret_mp(type='text' key="webhook_secret_mp" )
+
+
+            .col-12.col-lg-4
+                .form-group
+                    label(for='private_Key_mp') Private Key:
+                    input.form-control.updateConf#private_Key_mp(type='text' key="private_Key_mp")
+            .col-12.col-lg-4
+                .form-group
+                    label(for='public_Key_mp') Public Key:
+                    input.form-control.updateConf#public_Key_mp(type='text' key="public_Key_mp")
+    hr
+    h4.my-2 Sandbox
+    div
+        .row.my-2
+
+            .col-12.col-lg-4
+                .form-group
+                    label(for='webhook_secret_mp_sandbox') Webhook secret Code:
+                    input.form-control.updateConf#webhook_secret_mp_sandbox(type='text' key="webhook_secret_mp_sandbox" )
+
+
+            .col-12.col-lg-4
+                .form-group
+                    label(for='private_Key_mp_sandbox') Private Key:
+                    input.form-control.updateConf#private_Key_mp_sandbox(type='text' key="private_Key_mp_sandbox")
+            .col-12.col-lg-4
+                .form-group
+                    label(for='public_Key_mp_sandbox') Public Key:
+                    input.form-control.updateConf#public_Key_mp_sandbox(type='text' key="public_Key_mp_sandbox")
+    hr
+    h4  Production_Ready
+    input(type="checkbox" disabled=true)#production_ready_mp

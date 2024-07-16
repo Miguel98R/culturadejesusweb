@@ -1,0 +1,41 @@
+#pago_stripe_tab.tabsLi.tab-pane.fade(role='tabpanel' aria-labelledby='PagoStripe').my-4
+
+    h4.my-2 Production
+    div
+            .row.my-2
+
+
+                .col-12.col-lg-4
+                    .form-group
+                        label(for='private_Key_stripe') Private Key:
+                        input.form-control.updateConf#private_Key_stripe(type='text' key="private_Key_stripe")
+                .col-12.col-lg-4
+                    .form-group
+                        label(for='public_key_stripe') Public Key:
+                        input.form-control.updateConf#public_key_stripe(type='text' key="public_key_stripe")
+                .col-12.col-lg-4
+                    .form-group
+                        label(for='webhook_secret_stripe') Webhook Key:
+                        input.form-control.updateConf#webhook_secret_stripe(type='text' key="webhook_secret_stripe")
+
+    hr
+    h4  Sandbox
+    div
+            .row.my-2
+                .col-12.col-lg-4
+                    .form-group
+                        label(for='private_Key_stripe_sandbox') Private Key:
+                        input.form-control.updateConf#private_Key_stripe_sandbox(type='text' key="private_Key_stripe_sandbox")
+                .col-12.col-lg-4
+                    .form-group
+                        label(for='public_key_stripe_sandbox') Public Key:
+                        input.form-control.updateConf#public_key_stripe_sandbox(type='text' key="public_key_stripe_sandbox")
+
+                .col-12.col-lg-4
+                    .form-group
+                        label(for='webhook_secret_stripe_sandbox') Webhook Key:
+                        input.form-control.updateConf#webhook_secret_stripe_sandbox(type='text' key="webhook_secret_stripe_sandbox")
+
+    hr
+    h4  Production_Ready
+    input(type="checkbox" disabled=true)#production_ready_stripe

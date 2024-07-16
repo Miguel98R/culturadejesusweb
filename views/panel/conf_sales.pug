@@ -1,0 +1,58 @@
+doctype html
+html(lang='es')
+    head
+        include templates/head
+        include templates/styles
+    body
+        main
+            .page-wrapper#main-wrapper(data-layout='vertical', data-navbarbg='skin6', data-sidebartype='full', data-sidebar-position='fixed', data-header-position='fixed')
+                aside.left-sidebar
+                    include templates/menu
+                .body-wrapper
+                    header.app-header
+                        include templates/nav
+
+                    .container-fluid
+                        .row
+                            .col-lg-12.d-flex.align-items-strech
+
+
+                                .card.w-100
+                                    .card-header
+                                        div.my-2.text-end
+                                            // En pantallas grandes (no celular), muestra solo el texto
+                                            //button.new_product.btn.btn-primary.mx-2.d-none.d-lg-inline
+                                                i.mx-2.bi.bi-shop-window
+                                                | Nuevo producto
+                                            // En pantallas pequeñas (celulares), muestra solo el icono
+                                            //button.new_user.btn.btn-primary.mx-2.d-inline.d-lg-none
+                                                i.bi.bi-person
+
+
+
+
+                                    .card-body
+
+                                        div(style="overflow-y: auto;  height: 500px;")
+                                            table(id=table width='100%').table.table-hover.py-3.text-center
+                                                thead.table
+                                                    tr.my-5
+
+                                                        th Cliente
+                                                        th No Productos
+                                                        th Creación
+                                                        th Fechas
+                                                        th Total
+                                                        th Acciones
+
+        include modals/detailsSaleModal
+
+
+        include templates/scripts
+        script.
+
+            let STATUS = '!{status_sale}';
+            let TABLE = '!{table}';
+
+        script(src=url_js_files + '/common.js?v=' + Math.random())
+        script(src=url_js_files + '/sales.js?v=' + Math.random())

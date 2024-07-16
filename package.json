@@ -22,16 +22,21 @@
   },
   "dependencies": {
     "apiato": "^2.0.1",
+    "axios": "^1.7.2",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.1",
+    "connect-redis": "^7.1.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "express-session": "^1.17.3",
     "jsonwebtoken": "^9.0.0",
     "moment": "^2.29.4",
     "mongoose": "^6.6.5",
     "morgan": "^1.10.0",
-    "passport": "^0.6.0",
+    "mercadopago": "^2.0.5",
+    "nodemailer": "^6.9.14",
     "passport-local": "^1.0.0",
-    "pug": "^3.0.2"
+    "pug": "^3.0.2",
+    "redis": "4.6.7"
   }
 }

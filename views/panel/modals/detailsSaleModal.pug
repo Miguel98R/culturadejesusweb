@@ -1,0 +1,93 @@
+#detailsSaleModal.modal.fade(tabindex='-1' aria-labelledby='salesModalLabel' aria-hidden='true')
+    .modal-dialog.modal-xl
+        .modal-content
+            .modal-header
+                h2#salesModalLabel.modal-title.fw-bolder.fs-5 Detalles de la venta
+
+                button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+            .modal-body
+                .row.mx-5
+                    .col-6
+                        div
+                            h4.fw-bold Datos del usuario
+                            div.my-3
+                                p.m-2.fw-bold.text-dark.text-dark Nombre:
+                                    span.mx-1.fw-normal#name_user
+                                p.m-2.fw-bold.text-dark Email:
+                                    span.mx-1.fw-normal#email
+                                p.m-2.fw-bold.text-dark Celular:
+                                    span.mx-1.fw-normal#cellphone
+
+                                p.m-2.fw-bold.text-dark Calle:
+                                    span.mx-1.fw-normal#address
+                                p.m-2.fw-bold.text-dark noInt:
+                                    span.mx-1.fw-normal#noInt
+                                p.m-2.fw-bold.text-dark noExt:
+                                    span.mx-1.fw-normal#noExt
+                                p.m-2.fw-bold.text-dark Colonia:
+                                    span.mx-1.fw-normal#neighborhood
+                                p.m-2.fw-bold.text-dark C.P:
+                                    span.mx-1.fw-normal#zip
+                                p.m-2.fw-bold.text-dark Ciudad:
+                                    span.mx-1.fw-normal#city
+                                p.m-2.fw-bold.text-dark Estado:
+                                    span.mx-1.fw-normal#state
+
+                    .col-6
+                        div
+                            h4.fw-bold Comprobante de pago
+                            div
+                                div#sinComprobante.text-center
+                                    h4.my-3.text-warning Aún no se adjunta el comprobante de pago
+                                div#ConComprobante
+                                    .my-3
+                                        img#img_pago.img-fluid(style="max-height:350px;border-radius:10px;")
+                                div#mercadoPagoStatus.text-center
+                                    h5 Status de la compra:
+                                        span.mx-2#status_mp
+
+                .row.mx-5.my-3
+                    .col-4
+                        h4.fw-bold Datos de la venta
+                        div.my-3
+                            p.m-2.fw-bold.text-dark.text-dark Tipo de pago:
+                                span.mx-1.fw-normal#type_payout
+                            p.m-2.fw-bold.text-dark.text-dark Fecha de la compra:
+                                span.mx-1.fw-normal#date_sale
+                            p.m-2.fw-bold.text-dark.text-dark Cantidad de productos:
+                                span.mx-1.fw-normal#cant_products
+                            p.m-2.fw-bold.text-dark.text-dark Total de envio:
+                                span.mx-1.fw-normal#total_envio
+                            p.m-2.fw-bold.text-dark.text-dark Subtotal:
+                                span.mx-1.fw-normal#subtotal_sale
+                            p.m-2.fw-bold.text-dark.text-dark Total de la compra:
+                                span.mx-1.fw-normal#total_sale
+
+
+
+                    .col-8
+                        h4.fw-bold Productos
+                        .row#products
+
+            .modal-footer
+                button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Cerrar
+
+
+            div#templateProducts_.col-6(style="display:none;")
+                div
+                    .card
+                        .card-body
+                            .row
+                                .col-6
+                                    img#img_product_.img-fluid(style="max-height:150px;")
+                                .col-6
+                                    p#name_product_
+                                    p.m-0.p-0.fw-bold.text-dark.text-dark Precio unit.
+                                    span.my-1.fw-normal#price_product_
+                            div.my-3
+
+                                p.m-2.fw-bold.text-dark.text-dark Cantidad:
+                                    span.mx-1.fw-normal#cant_product_detail_
+                                p.m-2.fw-bold.text-dark.text-dark Total producto:
+                                    span.mx-1.fw-normal#total_product_
+

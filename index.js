@@ -7,6 +7,11 @@ const db = require('./db')
 //const db = require('./db')
 const app = express()
 
+
+const RedisStore = require("connect-redis").default
+const session = require('express-session');
+const {createClient} = require('redis');
+
 //configuraciones
 app.set('port',process.env.PORT || 3005 )
 app.set('appName',process.env.APP_NAME)
@@ -34,6 +39,28 @@ app.get(/robots\.txt$/, function (req, res) {
         Sitemap: ${urlHost}/sitemap.xml
     `);
 });
+
+// Initialize client.
+let redisClient = createClient()
+redisClient.on('error', err => console.log('Redis Client Error', err));
+
+redisClient.connect();
+
+// Initialize sesssion storage.
+app.use(
+    session({
+        store: new RedisStore({
+            client: redisClient,
+        }),
+        secret: process.env.EXPRESS_SESSION_SECRET,
+        name: process.env.NAME_COOKIE_SESSION,
+        resave: true,
+        saveUninitialized: true,
+        cookie: { maxAge: 7 * 24 * 60 * 60 * 1000 },
+        httpOnly: true
+    })
+
+)
 
 //rutas
 app.use(require('./viewEngine/routes'))

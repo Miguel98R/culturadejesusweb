@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Template</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111111;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Centra verticalmente en la pantalla */
+        }
+
+        .email-container {
+            max-width: 600px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            text-align: center; /* Centra el texto horizontalmente */
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        h3 {
+            color: #ff6666; /* Color entre rojo y blanco */
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="email-container">
+    <img src="{{image_banner}}" alt="Banner Image">
+
+    <p>Estimado(a) <strong>{{name_people}}</strong>,</p>
+
+    <p>Agradecemos la amable invitación a nuestro Pastor Héctor Andrade para participar en
+        <strong>{{name_event}}</strong>.
+    <p>Antes de confirmar nuestra asistencia, nos gustaría obtener más detalles sobre el evento y el lugar donde se
+        llevará a cabo.</p>
+
+    <h3> 1 - Información del Evento:</h3>
+
+    <p>¿Podría proporcionarnos más detalles sobre la temática y los objetivos del evento?</p>
+    <p>¿Habrá otros invitados especiales?</p>
+    <p>¿Cómo nació la idea del evento?</p>
+
+
+    <h3>2 - Detalles del Lugar:</h3>
+
+    <p>¿Dónde se llevará a cabo exactamente el evento?</p>
+    <p>¿Hay alguna dirección o ubicación específica que debamos tener en cuenta?</p>
+    <p>¿Existen requisitos especiales o información importante que debamos conocer sobre el lugar?</p>
+
+
+    <h3>3 - Hospedaje:</h3>
+    <p>¿Podría recomendarnos lugares cercanos donde pueda hospedarse nuestro pastor durante el evento?</p>
+    <p>¿Hay alguna tarifa especial o acuerdo con algún hotel cercano al lugar del evento?</p>
+
+
+    <p>Agradecemos de antemano la oportunidad de participar en este evento y esperamos su pronta respuesta.</p>
+
+    <p>Si tiene preguntas o desea proporcionar información adicional, por favor contáctenos en <a href="mailto:fuegomexicanoservice@gmail.com">fuegomexicanoservice@gmail.com</a> o envíenos un mensaje de
+        WhatsApp al <a href="https://wa.me/527715690858">7715690858</a>. </p>
+    <p>  Si desea proporcionar fechas específicas en las
+        que le gustaría que asistiera el pastor Héctor a su evento, también se lo agradeceríamos.</p>
+
+    <p>Saludos cordiales,</p>
+    <strong>Atte. Equipo de Fuego Mexicano</strong>
+</div>
+</body>
+</html>

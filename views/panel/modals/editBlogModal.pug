@@ -1,0 +1,47 @@
+#editBlogModal.modal.fade(tabindex='-1' aria-labelledby='newUserLabel' aria-hidden='true')
+    .modal-dialog.modal-lg
+        .modal-content
+            .modal-header
+                h2#newUserLabel.modal-title.fw-bolder.fs-5 Editar blog
+                button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+            .modal-body
+                .row
+                    .col-6
+                        .mb-3
+                            label.form-label(for='title_edit') Titulo
+                            input.form-control#title_edit(type='text', aria-describedby='textHelp')
+                        .mb-3
+                            label.form-label(for='subtitle_edit') Sub titulo
+
+                            input.form-control#subtitle_edit(type='text', aria-describedby='textHelp')
+                        .mb-3
+                            label.form-label(for='date_edit') Fecha de publicación
+
+                            input.form-control#date_edit(type='date')
+                        .mb-4
+                            label.form-label(for='image_edit') Imagen
+
+                            div
+                                img.img-fluid(style="max-height:140px;border-radius:10px;")#img_preview
+
+                            input.form-control#image_edit(type='file' isEdit="false").image
+                            input.form-control#image_save_edit(type='text' style="display:none;")
+
+
+                        .mb-4
+                            label.mx-2.form-check-label(for="isPublicate_edit") Publicado:
+                            input.form-check-input#isPublicate_edit(type='checkbox', aria-describedby='activeHelp')
+
+                    .col-6
+
+                        .mb-3
+                            label.form-label(for='content_edit') Texto del blog
+                            div#content_edit
+
+
+
+
+
+            .modal-footer
+                button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Cerrar
+                button.btn.btn-primary(type='button')#editBlog  Guardar

@@ -1,0 +1,38 @@
+#editUserModal.modal.fade(tabindex='-1' aria-labelledby='editUserLabel' aria-hidden='true')
+    .modal-dialog
+        .modal-content
+            .modal-header
+                h2#editUserLabel.modal-title.fw-bolder.fs-5 Editar usuario
+                button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+            .modal-body
+                .mb-3
+                    label.form-label(for='name_edit') Nombre
+
+                    input.form-control#name_edit(type='text', aria-describedby='textHelp')
+                .mb-3
+                    label.form-label(for='user_name_edit') Usuario
+
+                    input.form-control#user_name_edit(type='text', aria-describedby='textHelp')
+                .mb-3
+                    label.form-label(for='email_edit') Email
+
+                    input.form-control#email_edit(type='email', aria-describedby='emailHelp')
+                .mb-4
+                    label.form-label(for='password_edit') Contraseña
+
+                    input.form-control#password_edit(type='password')
+                .mb-4
+                    label.form-label(for="type_users_edit") Seleccionar el tipo de usuario:
+                    select.form-select#type_users_edit(name="type_users")
+                        option(value="admin") Administrator
+                        option(value="user") User
+                .mb-4
+                    label.mx-2.form-check-label(for="active_edit") Activo:
+                    input.form-check-input#active_edit(type='checkbox', aria-describedby='activeHelp')
+
+
+
+
+            .modal-footer
+                button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Cerrar
+                button.btn.btn-primary(type='button')#editUser Guardar

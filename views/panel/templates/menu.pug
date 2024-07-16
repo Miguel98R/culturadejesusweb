@@ -1,0 +1,27 @@
+div
+    .brand-logo.d-flex.align-items-center.justify-content-between
+        a.text-nowrap.logo-img(href='/panel')
+            h4.text-danger.my-3 Fuego
+                span.text-black Mexicano
+        .close-btn.d-xl-none.d-block.sidebartoggler.cursor-pointer#sidebarCollapse
+            i.ti.ti-x.fs-8
+    div.brand-logo.d-flex.align-items-center.justify-content-between
+        p.nav-small-cap
+            i.ti.ti-dots.nav-small-cap-icon.fs-4
+            |
+            span.hide-menu Menú
+    nav.sidebar-nav.scroll-sidebar(data-simplebar)
+        ul#sidebarnav
+
+            if menu
+                each item in menu
+                    li.sidebar-item
+                        a.sidebar-link(href=item.href, aria-expanded='false')
+                            span
+                                i(class=`${item.icon}`)
+                                |
+                            span.mx-1.hide-menu=item.label
+
+    button#close_session.btn.bg-white.text-black.fw-bold
+            i.bi.bi-box-arrow-in-left.mx-2
+            span Cerrar sesion

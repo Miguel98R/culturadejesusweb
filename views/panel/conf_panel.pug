@@ -1,0 +1,39 @@
+doctype html
+html(lang='es')
+    head
+        include templates/head
+        include templates/styles
+    body
+        main
+            .page-wrapper#main-wrapper(data-layout='vertical', data-navbarbg='skin6', data-sidebartype='full', data-sidebar-position='fixed', data-header-position='fixed')
+                aside.left-sidebar
+                    include templates/menu
+                .body-wrapper
+                    header.app-header
+                        include templates/nav
+
+                    .container-fluid
+
+
+                        .card.w-100
+                            .card-header
+                            .card-body
+                                .row
+                                    .col-12.col-md-4.col-lg-4.text-start
+                                        .form-group
+                                            label.form-control.fw-bolder Correo de notificación
+                                            input.form-control#email_notification.update_conf(type='text' value_conf='email_notification')
+                                    .col-12.col-md-4.col-lg-4.text-start
+                                        .form-group
+                                            label.form-control.fw-bolder Dias para cancelar una orden
+                                            input.form-control#day_cancelled.update_conf(type='text' value_conf='day_cancelled')
+                                    .col-12.col-md-4.col-lg-4.text-start
+                                        .form-group
+                                            label.form-control.fw-bolder Correo de notificación invitaciónes
+                                            input.form-control#email_notification_invitation.update_conf(type='text' value_conf='email_notification_invitation')
+
+
+
+    include templates/scripts
+    script(src=url_js_files + '/common.js?v=' + Math.random())
+    script(src=url_js_files + '/confPanel.js?v=' + Math.random())

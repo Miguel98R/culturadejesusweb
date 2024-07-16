@@ -1,0 +1,53 @@
+doctype html
+html(lang='es')
+    head
+        include templates/head
+        include templates/styles
+    body
+        main
+            .page-wrapper#main-wrapper(data-layout='vertical', data-navbarbg='skin6', data-sidebartype='full', data-sidebar-position='fixed', data-header-position='fixed')
+                .position-relative.overflow-hidden.radial-gradient.min-vh-100.d-flex.align-items-center.justify-content-center
+                    .d-flex.align-items-center.justify-content-center.w-100
+                        .row.justify-content-center.w-100
+                            .col-2.col-md-4
+                            .col-8.col-md-4
+                                .card.mb-0.mt-4
+                                    .card-body
+
+                                        a.text-nowrap.logo-img.text-center.d-block.py-3.w-100(href='/cjPanel')
+                                            img(src='/public/images/logos/cjn_min.png', style="max-height:140px;", alt).img-fluid.rounded-pill
+                                        p.text-center.fw-bold.text-black Iniciar sesión
+                                        form#loginForm(role='form' action="api/auth/loginSesion" method="POST").text-start
+
+                                            .mb-3
+                                                label.form-label(for='user_name') Usuario
+                                                |
+                                                input.form-control#user_name(type='text' name="user_name" aria-describedby='emailHelp')
+                                            .mb-4
+                                                label.form-label(for='password') Contraseña
+                                                |
+                                                input.form-control#password(type='password' name="password")
+
+                                            button#loginBtn.btn.btn-primary.w-100.py-8.fs-4.mb-4.rounded-2 Entrar
+                                div.text-center.my-1
+                                    p.copyright-text
+                                        | Cultura de Jesus © 2023
+                                        strong.mx-2 Fuego Mexicano
+                                    a(href='https://mikerosasdev.com/')
+                                        p(style="font-size:11px").copyright-text
+                                            | Desarrollado por Mike Rosas Dev
+                            .col-2.col-md-4
+
+
+
+
+
+
+
+
+        include templates/scripts
+        script(src=`${url_js_files}/common.js?v=${Math.random()}`)
+        script.
+            var message_error = '!{message_error}';
+
+        script(src=`${url_js_files}/login.js?v=${Math.random()}`)

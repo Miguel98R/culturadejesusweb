@@ -1,0 +1,38 @@
+#editProductModal.modal.fade(tabindex='-1' aria-labelledby='editProductLabel' aria-hidden='true')
+    .modal-dialog
+        .modal-content
+            .modal-header
+                h2#editProductLabel.modal-title.fw-bolder.fs-5 Editar producto
+                button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+            .modal-body
+                .mb-3
+                    label.form-label(for='name_product_edit') Nombre
+
+                    input.form-control#name_product_edit(type='text', aria-describedby='textHelp')
+                .mb-3
+                    label.form-label(for='description_edit') Descripción
+
+                    textarea.form-control#description_edit(rows='8', aria-describedby='textHelp')
+                .mb-3
+                    label.form-label(for='image_edit') Imagen
+
+                    input.image.form-control#image_edit(type='file' isEdit="true")
+                    input(type="text" style="display:none;")#image_save_edit
+                .mb-3
+                    label.form-label(for='price_edit') Precio
+
+                    input.form-control#price_edit(type='number' min="0" aria-describedby='numberlHelp')
+                .mb-3
+                    label.form-label(for='stock_edit') Stock
+
+                    input.form-control#stock_edit(type='number' min="0" aria-describedby='numberlHelp')
+
+                .mb-4
+                    label.mx-2.form-check-label(for="active_edit") Activo:
+                    input.form-check-input#active_edit(type='checkbox', aria-describedby='activeHelp')
+
+
+
+            .modal-footer
+                button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Cerrar
+                button.btn.btn-primary(type='button')#editProduct Guardar

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Template</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111111;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Centra verticalmente en la pantalla */
+        }
+
+        .email-container {
+            max-width: 600px;
+            background-color: #222222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            color: #ff6666; /* Color de texto entre rojo y blanco */
+            text-align: center; /* Centra el texto horizontalmente */
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #ff6666; /* Color entre rojo y blanco */
+        }
+
+        h1, p {
+            color: #ffffff;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+<div class="email-container">
+    <img src="{{image_banner}}" alt="Banner Image">
+    <h2>{{small_title}}</h2>
+    <h1>{{big_title}}</h1>
+    <p>{{description}}</p>
+    <a href="{{button_link}}">{{button_text}}</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+doctype html
+html(lang='es')
+  head
+    include templates/head
+    include templates/styles
+  body
+    .page-wrapper#main-wrapper(data-layout='vertical', data-navbarbg='skin6', data-sidebartype='full', data-sidebar-position='fixed', data-header-position='fixed')
+      .position-relative.overflow-hidden.radial-gradient.min-vh-100.d-flex.align-items-center.justify-content-center
+        .d-flex.align-items-center.justify-content-center.w-100
+          .row.justify-content-center.w-100
+            .col-md-8.col-lg-6.col-xxl-3
+              .card.mb-0
+                .card-body
+                  a.text-nowrap.logo-img.text-center.d-block.py-3.w-100(href='./index ')
+                    img(src='../assets/images/logos/dark-logo.svg', style="max-height:100px;", alt).img-fluid
+                  h3.text-center Registrar nuevo usuario admin
+                  div
+                    .mb-3
+                      label.form-label(for='name') Nombre
+                      |  
+                      input.form-control#name(type='text', aria-describedby='textHelp')
+                    .mb-3
+                      label.form-label(for='user_name') Usuario
+                      |
+                      input.form-control#user_name(type='text', aria-describedby='textHelp')
+                    .mb-3
+                      label.form-label(for='email') Email
+                      |  
+                      input.form-control#email(type='email', aria-describedby='emailHelp')
+                    .mb-4
+                      label.form-label(for='password') Contraseña
+                      |  
+                      input.form-control#password(type='password')
+                    button#createAdmin.btn.btn-danger.w-100.py-8.fs-4.mb-4.rounded-2 Enviar
+
+    include templates/scripts
+    script(src=`/public/js/jsPanel/common.js?v=${Math.random()}`)
+    script(src=`/public/js/jsPanel/register.js?v=${Math.random()}`)

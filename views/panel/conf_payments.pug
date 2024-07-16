@@ -1,0 +1,33 @@
+doctype html
+html(lang='es')
+    head
+        include templates/head
+        include templates/styles
+    body
+        main
+            .page-wrapper#main-wrapper(data-layout='vertical', data-navbarbg='skin6', data-sidebartype='full', data-sidebar-position='fixed', data-header-position='fixed')
+                aside.left-sidebar
+                    include templates/menu
+                .body-wrapper
+                    header.app-header
+                        include templates/nav
+
+                    .container-fluid
+                        .card.w-100
+                            .card-header
+                            .card-body
+                                ul.my-2#myTab_.nav.nav-tabs(role='tablist').bg-transparent
+                                    li#unoTab.tabsLi.nav-item(role='presentation')
+                                        button#pago_mercado_pago.nav-link(data-bs-toggle='tab' data-bs-target='#pago_mercado_pago_tab' type='button' role='tab' aria-controls='PagoMercadoP' aria-selected='true') Mercado pago
+                                    li#finalTab.tabsLi.nav-item(role='presentation')
+                                        button#pago_stripe.nav-link(data-bs-toggle='tab' data-bs-target='#pago_stripe_tab' type='button' role='tab' aria-controls='PagoStripe' aria-selected='false') Stripe
+                                #myTabContent_.tab-content
+                                    include templates/mercado_pago_tab
+                                    include templates/stripe_tab
+
+
+
+
+    include templates/scripts
+    script(src=url_js_files + '/common.js?v=' + Math.random())
+    script(src=url_js_files + '/confPayments.js?v=' + Math.random())

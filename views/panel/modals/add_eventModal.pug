@@ -1,0 +1,24 @@
+#addEventModal.modal.fade(tabindex='-1' aria-labelledby='addEventLabel' aria-hidden='true')
+    .modal-dialog
+        .modal-content
+            .modal-header
+                h2#addEventLabel.modal-title.fw-bolder.fs-5 Agregar fecha
+
+                button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+            .modal-body
+                div.text-center
+                    h3#month_modal_name.fw-lighter
+                div.py-3
+                    .mb-3
+                        label.form-label(for='location') Lugar
+                        input.form-control#location(type='text', aria-describedby='textHelp')
+
+                    .mb-3
+                        label.form-label(for='date') Fecha
+
+                        input.form-control#date(type='date')
+
+
+            .modal-footer
+                button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Cerrar
+                button.btn.btn-primary(type='button')#saveDate  Guardar

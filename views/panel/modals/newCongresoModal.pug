@@ -1,0 +1,51 @@
+#newCongresoModal.modal.fade(tabindex='-1' aria-labelledby='newCongresoLabel' aria-hidden='true')
+    .modal-dialog
+        .modal-content
+            .modal-header
+                h2#newCongresoLabel.modal-title.fw-bolder.fs-5 Nuevo congreso / evento
+                button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+            .modal-body
+                .mb-3
+                    label.form-label(for='name_Congreso') Nombre
+
+                    input.form-control#name_Congreso(type='text' aria-describedby='textHelp')
+                .mb-3
+                    label.form-label(for='location') Lugar del congreso
+                    input.form-control#location(type='text' aria-describedby='textHelp')
+
+                .mb-3
+                    label.form-label(for='image') Imagen
+
+                    input.image.form-control#image(type='file' isEdit="false")
+                    input(type="text" style="display:none;")#image_save
+
+
+                .mb-3
+                    .row 
+
+                        .col-4
+                            label.form-label(for='date_initial') Fecha inicial
+                            input.form-control#date_initial(type='date')
+                        .col-4
+                            label.form-label(for='date_initial') Fecha final 
+                            input.form-control#date_finish(type='date')
+                        .col-4
+                            label.form-label(for='hour_initial') Hora de inicio
+                            input.form-control#hour_initial(type='time')
+                        
+
+
+                .mb-3
+                    label.form-label(for='link_boletos') Link para adquirir boletos
+
+                    input.form-control#link_boletos(type='text' aria-describedby='numberlHelp')
+
+                .mb-4
+                    label.mx-2.form-check-label(for="active") Activo:
+                    input.form-check-input#active(type='checkbox' aria-describedby='activeHelp')
+
+
+
+            .modal-footer
+                button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Cerrar
+                button.btn.btn-primary(type='button')#saveCongreso Guardar
